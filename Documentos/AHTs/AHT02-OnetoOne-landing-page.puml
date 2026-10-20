@@ -1,0 +1,50 @@
+@startuml AHT02-OnetoOne-landing-page
+skinparam DefaultTextAlignment center
+title AHT 02: Landing Page do Studio One to One
+
+note right
+  A Landing Page do Studio One to One é voltada ao público adulto, com foco em
+  treinamento personalizado, nutrição e fisioterapia integrada.
+end note
+
+start
+
+#5B9BD5:Usuário chega à Landing Page do Studio One to One;
+#5B9BD5:Sistema exibe Hero Section do Studio One to One, com botão "Matricule-se";
+
+if (Usuário deseja se matricular?) then (sim)
+  #lightyellow:Usuário é direcionado para a página de cadastro;
+  note right: AHT 04
+  break
+  else (não)
+  #lightyellow:Usuário continua explorando a Landing Page;
+  endif
+
+#5B9BD5:Sistema exibe informações sobre o Studio One to One e seus diferenciais;
+#5B9BD5:Sistema exibe catálogo de planos (somente com benefícios, sem valores);
+#5B9BD5:Sistema exibe avaliações de alunos;
+#5B9BD5:Sistema exibe formulário para agendar aula experimental;
+if (Usuário deseja preencher o formulário?) then (sim)
+  #lightyellow:Usuário preenche e envia o formulário;
+  else (não)
+  #lightyellow:Usuário continua explorando a Landing Page;
+  endif
+
+#5B9BD5:Sistema exibe FAQ com as 5 principais dúvidas;
+#5B9BD5:Sistema exibe CTA com as opções "Agende uma aula" e "Matricule-se";
+
+if (Qual foi a escolha do usuário?) then ("Matricule-se")
+  #lightyellow:Usuário é direcionado para a página de cadastro;
+  note right: AHT 04
+  else ("Agende uma aula")
+  #lightyellow:Usuário é direcionado ao formulário da aula experimental;
+endif
+
+legend right
+  |Cor | Significado|
+  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
+  |<#lightyellow>| Resultado de uma decisão do usuário |
+endlegend
+
+stop
+@enduml

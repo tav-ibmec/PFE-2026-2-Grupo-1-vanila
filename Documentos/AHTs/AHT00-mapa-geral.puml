@@ -1,0 +1,44 @@
+@startuml AHT00-mapa-geral
+
+skinparam DefaultTextAlignment center
+title AHT 00: Mapa Completo do Percurso do Usuário no site (até o momento)
+
+start
+
+#5B9BD5:Página Inicial\n(Hero Section e Hub de Marcas);
+note right: AHT 01
+
+if (Qual marca foi escolhida?) then (PKZ Lab)
+  #lightyellow:Landing Page PKZ Lab;
+  note right: AHT 03
+else (One to One)
+  #lightyellow:Landing Page Studio One to One;
+  note right: AHT 02
+endif
+
+if (Usuário decide se cadastrar?) then (sim)
+
+  if (Qual marca ele escolheu?) then (PKZ Lab)
+    #lightyellow:Cadastro PKZ Lab;
+    note right: AHT 05
+  else (One to One)
+    #lightyellow:Cadastro Studio One to One;
+    note right: AHT 04
+  endif
+
+  #5B9BD5:Cadastro concluído;
+
+else (não)
+  #lightyellow:Usuário encerra a visita ou continua navegando pelo site;
+endif
+
+
+legend right
+  |Cor | Significado|
+  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
+  |<#lightyellow>| Resultado de uma decisão do usuário |
+endlegend
+
+stop
+
+@enduml

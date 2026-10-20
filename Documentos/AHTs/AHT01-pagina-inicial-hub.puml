@@ -1,0 +1,33 @@
+@startuml AHT01-pagina-inicial-hub
+
+skinparam DefaultTextAlignment center
+title AHT 01: Página Inicial e Hub de Marcas
+
+note right
+  Ponto de entrada do site: A Hero Section
+  apresenta uma explicação sobre o trabalho das duas marcas 
+  de forma mais geral, e o Hub abaixo direciona o usuário 
+  para a Landing Page da marca escolhida (PKZ Lab ou Studio One to One).
+end note
+
+start
+
+#5B9BD5:Usuário acessa a página inicial;
+#5B9BD5:Sistema exibe Hero Section com as duas marcas e o Hub de escolha;
+
+if (Qual marca foi escolhida?) then (PKZ Lab)
+  #lightyellow:Direciona o usuário para a Landing Page da PKZ Lab;
+  note right: AHT 03
+else (Studio One to One)
+  #lightyellow:Direciona o usuário para a Landing Page do Studio One to One;
+  note right: AHT 02
+endif
+
+legend right
+  |Cor | Significado|
+  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
+  |<#lightyellow>| Resultado de uma decisão do usuário |
+endlegend
+
+stop
+@enduml

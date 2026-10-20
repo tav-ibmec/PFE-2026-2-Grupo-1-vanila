@@ -1,0 +1,48 @@
+@startuml AHT03-PKZ-landing-page
+skinparam DefaultTextAlignment center
+title AHT 03: Landing Page da PKZ Lab
+
+note right
+ A Landing Page da PKZ Lab é voltada a jovens atletas e seus responsáveis, 
+ com foco na formação e no desenvolvimento desde cedo.
+end note
+
+start
+
+#5B9BD5:Usuário chega à Landing Page da PKZ Lab;
+#5B9BD5:Sistema exibe Hero Section da PKZ Lab, com as opções "Agende uma aula" e "Saiba mais";
+
+if (Usuário deseja agendar uma aula?) then (sim)
+  #lightyellow:Usuário é direcionado para o formulário "Agende uma aula experimental";
+  else (não)
+  #lightyellow:Usuário continua explorando a Landing Page;
+  endif
+
+#5B9BD5:Sistema exibe informações sobre a PKZ Lab e seus diferenciais;
+#5B9BD5:Sistema exibe catálogo de pacotes (somente com benefícios, sem valores);
+#5B9BD5:Sistema exibe avaliações de responsáveis e atletas;
+#5B9BD5:Sistema exibe o formulário "Agende uma aula experimental";
+if (Usuário deseja preencher o formulário?) then (sim)
+  #lightyellow:Usuário preenche e envia o formulário;
+  else (não)
+  #lightyellow:Usuário continua explorando a Landing Page;
+  endif
+  
+#5B9BD5:Sistema exibe FAQ com as 5 principais dúvidas;
+#5B9BD5:Sistema exibe CTA com as opções "Agende uma aula" e "Matricule-se";
+
+if (Qual foi a escolha do usuário?) then ("Matricule-se")
+  #lightyellow:Usuário é direcionado para a página de cadastro;
+  note right: AHT 05
+  else ("Agende uma aula")
+  #lightyellow:Usuário é direcionado ao formulário da aula experimental;
+endif
+
+legend right
+  |Cor | Significado|
+  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
+  |<#lightyellow>| Resultado de uma decisão do usuário |
+endlegend
+
+stop
+@enduml

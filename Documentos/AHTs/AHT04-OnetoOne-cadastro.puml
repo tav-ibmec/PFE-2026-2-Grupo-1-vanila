@@ -1,0 +1,36 @@
+@startuml AHT04-OnetoOne-cadastro
+skinparam DefaultTextAlignment center
+title AHT 04: Cadastro Studio One to One
+
+note right
+  Fluxo de cadastro do Studio One to One, acessado a partir
+  da AHT 02
+end note
+
+start
+
+#5B9BD5:Usuário chega à página de Cadastro do Studio One to One;
+#5B9BD5:Sistema exibe formulário para o cadastro do aluno e a escolha do plano;
+
+repeat
+  #lightyellow:Preencheu o formulário e escolheu o plano;
+  #lightyellow:Clicou em "Selecionar";
+
+  if (Cadastro processado com sucesso?) then (sim)
+    #5B9BD5:Sistema exibe "Cadastro realizado com sucesso!";
+    break
+  else (não)
+    #5B9BD5:Sistema exibe "Não foi possível concluir o cadastro, Verifique os dados e tente novamente";
+    #5B9BD5:Retornar ao formulário de cadastro;
+  endif
+repeat while (Deseja tentar novamente?) is (sim)
+->não;
+
+legend right
+  |Cor | Significado|
+  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
+  |<#lightyellow>| Resultado de uma decisão do usuário |
+endlegend
+
+stop
+@enduml
