@@ -25,5 +25,3 @@ Organizar o desenvolvimento do projeto usando práticas do Scrum, mantendo visí
 4. Registrem os Dailies que realmente acontecerem. Não preencham reuniões que não ocorreram.
 5. Ao final da Sprint, preencham a Review e a Retrospectiva, se estiverem previstas no processo da equipe ou na orientação do professor.
 6. Atualizem esta documentação no próprio repositório para que todos tenham acesso à versão mais recente.
-
-> **Importante:** os dias e horários dos próximos encontros ainda não foram definidos; no encontro de 20/10, a equipe apenas conversou sobre a disponibilidade dos integrantes. Os requisitos específicos do site devem ser confirmados a partir do enunciado do professor e do protótipo. Por isso, os itens iniciais do backlog abaixo são uma base de organização, não uma afirmação de que todos os requisitos já foram aprovados.
