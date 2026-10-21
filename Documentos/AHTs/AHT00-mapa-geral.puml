@@ -3,6 +3,15 @@
 skinparam DefaultTextAlignment center
 title AHT 00: Mapa Completo do Percurso do Usuário no site (até o momento)
 
+note right
+  As AHT 04 e AHT 05 foram retiradas,
+  pois não faremos página de cadastro.
+
+  Foram adicionadas as AHT 06 e AHT 07,
+  referentes ao agendamento de aula experimental
+  do Studio One to One e da PKZ Lab.
+end note
+
 start
 
 #5B9BD5:Página Inicial\n(Hero Section e Hub de Marcas);
@@ -11,27 +20,25 @@ note right: AHT 01
 if (Qual marca foi escolhida?) then (PKZ Lab)
   #lightyellow:Landing Page PKZ Lab;
   note right: AHT 03
+
+  if (Usuário decide agendar uma aula experimental?) then (sim)
+    #lightyellow:Agendamento de Aula Experimental da PKZ Lab;
+    note right: AHT 07
+  else (não)
+    #lightyellow:Usuário encerra a visita ou continua navegando pelo site;
+  endif
+
 else (One to One)
   #lightyellow:Landing Page Studio One to One;
   note right: AHT 02
-endif
 
-if (Usuário decide se cadastrar?) then (sim)
-
-  if (Qual marca ele escolheu?) then (PKZ Lab)
-    #lightyellow:Cadastro PKZ Lab;
-    note right: AHT 05
-  else (One to One)
-    #lightyellow:Cadastro Studio One to One;
-    note right: AHT 04
+  if (Usuário decide agendar uma aula experimental?) then (sim)
+    #lightyellow:Agendamento de Aula Experimental do Studio One to One;
+    note right: AHT 06
+  else (não)
+    #lightyellow:Usuário encerra a visita ou continua navegando pelo site;
   endif
-
-  #5B9BD5:Cadastro concluído;
-
-else (não)
-  #lightyellow:Usuário encerra a visita ou continua navegando pelo site;
 endif
-
 
 legend right
   |Cor | Significado|
