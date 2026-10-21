@@ -3,44 +3,46 @@ skinparam DefaultTextAlignment center
 title AHT 03: Landing Page da PKZ Lab
 
 note right
- A Landing Page da PKZ Lab é voltada a jovens atletas e seus responsáveis, 
+ A Landing Page da PKZ Lab é voltada a jovens atletas e seus responsáveis,
  com foco na formação e no desenvolvimento desde cedo.
+
+ Atualizações:
+ A página de cadastro da AHT 05 foi retirada, pois não será implementada.
+ O formulário de aula experimental será aberto em um modal, correspondente à AHT 07.
+ O botão "Voltar" existe na Landing Page e no modal, mas é representado
+ uma única vez em cada fluxo para evitar redundância.
 end note
 
 start
 
-#5B9BD5:Usuário chega à Landing Page da PKZ Lab;
-#5B9BD5:Sistema exibe Hero Section da PKZ Lab, com as opções "Agende uma aula" e "Saiba mais";
+#C4B5FD:Usuário chega à Landing Page da PKZ Lab;
+#C4B5FD:Sistema exibe Hero Section da PKZ Lab, com a opção "Agendar aula experimental", a opção "Saiba mais" e o botão "Voltar à Página Inicial";
 
-if (Usuário deseja agendar uma aula?) then (sim)
-  #lightyellow:Usuário é direcionado para o formulário "Agende uma aula experimental";
-  else (não)
+if (Usuário clicou em "Voltar à Página Inicial"?) then (sim)
+  #lightyellow:Usuário retorna à Página Inicial e ao Hub de Marcas;
+  note right: AHT 01
+  stop
+else (não)
+  #lightyellow:Usuário continua na Landing Page da PKZ Lab;
+endif
+
+#C4B5FD:Sistema exibe informações sobre a PKZ Lab e seus diferenciais;
+#C4B5FD:Sistema exibe catálogo de pacotes (somente com benefícios, sem valores);
+#C4B5FD:Sistema exibe avaliações de responsáveis e atletas;
+#C4B5FD:Sistema exibe FAQ com as 5 principais dúvidas;
+#C4B5FD:Sistema exibe CTA com a opção "Agende uma aula" e o botão "Voltar à Página Inicial";
+
+if (Usuário deseja agendar uma aula experimental?) then (sim)
+  #lightyellow:Usuário clica em "Agende uma aula";
+  #C4B5FD:Sistema abre o modal de agendamento da aula experimental;
+  note right: AHT 07
+else (não)
   #lightyellow:Usuário continua explorando a Landing Page;
-  endif
-
-#5B9BD5:Sistema exibe informações sobre a PKZ Lab e seus diferenciais;
-#5B9BD5:Sistema exibe catálogo de pacotes (somente com benefícios, sem valores);
-#5B9BD5:Sistema exibe avaliações de responsáveis e atletas;
-#5B9BD5:Sistema exibe o formulário "Agende uma aula experimental";
-if (Usuário deseja preencher o formulário?) then (sim)
-  #lightyellow:Usuário preenche e envia o formulário;
-  else (não)
-  #lightyellow:Usuário continua explorando a Landing Page;
-  endif
-  
-#5B9BD5:Sistema exibe FAQ com as 5 principais dúvidas;
-#5B9BD5:Sistema exibe CTA com as opções "Agende uma aula" e "Matricule-se";
-
-if (Qual foi a escolha do usuário?) then ("Matricule-se")
-  #lightyellow:Usuário é direcionado para a página de cadastro;
-  note right: AHT 05
-  else ("Agende uma aula")
-  #lightyellow:Usuário é direcionado ao formulário da aula experimental;
 endif
 
 legend right
   |Cor | Significado|
-  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
+  |<#C4B5FD>| Ação ou tela exibida pelo sistema |
   |<#lightyellow>| Resultado de uma decisão do usuário |
 endlegend
 
