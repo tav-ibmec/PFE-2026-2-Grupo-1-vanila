@@ -1,0 +1,76 @@
+@startuml AHT07-PKZLab-agendamento
+
+skinparam DefaultTextAlignment center
+
+title AHT 07: Agendamento de Aula Experimental da PKZ Lab
+
+note right
+  Somente o agendamento de aula experimental.
+  Não há cadastro de usuário, login ou sign up.
+  O agendamento da PKZ Lab é aberto em um modal a partir da AHT 03.
+
+  O botão "Voltar" existe em todas as telas do modal,
+  mas é representado uma única vez para evitar redundância.
+end note
+
+start
+
+#C4B5FD:Usuário clica em "Agendar aula experimental" na Landing Page;
+#C4B5FD:Sistema abre o modal de agendamento;
+#C4B5FD:Sistema exibe o calendário com os dias disponíveis e o botão "Voltar";
+
+if (Usuário clicou em "Voltar"?) then (Sim)
+  #lightyellow:Usuário retorna à navegação na Landing Page da PKZ Lab;
+  note right: AHT 03
+  stop
+else (Não)
+  #lightyellow:Usuário escolhe uma data no calendário;
+endif
+
+while (A data possui horários disponíveis?) is (Não)
+  #C4B5FD:Sistema informa "Não há horários disponíveis nesta data";
+  #lightyellow:Usuário escolhe outra data no calendário;
+endwhile (Sim)
+
+#C4B5FD:Sistema exibe os horários disponíveis para a data escolhida;
+#lightyellow:Usuário escolhe um horário;
+
+#C4B5FD:Sistema exibe o formulário com os dados do responsável e do atleta;
+#C4B5FD:Sistema solicita os dados do responsável: nome, e-mail, telefone e relação com o atleta;
+#C4B5FD:Sistema solicita os dados do atleta: nome, idade, modalidade esportiva e objetivo da aula experimental;
+#C4B5FD:Sistema exibe os botões "Voltar" e "Confirmar agendamento";
+
+repeat
+  #lightyellow:Usuário preenche os dados do responsável e do atleta e clica em "Confirmar agendamento";
+
+  if (Os dados solicitados estão válidos?) then (Sim)
+    #C4B5FD:Sistema envia os dados do agendamento, do responsável e do atleta ao back-end;
+
+    if (Agendamento registrado com sucesso?) then (Sim)
+      #C4B5FD:Sistema exibe "Aula experimental da PKZ Lab agendada com sucesso!";
+      #C4B5FD:Sistema exibe a data, o horário e os dados da aula experimental confirmados;
+      break
+    else (Não)
+      #C4B5FD:Sistema informa "Não foi possível concluir o agendamento";
+      #lightyellow:Usuário decide se deseja tentar novamente;
+    endif
+
+  else (Não)
+    #C4B5FD:Sistema destaca os dados do responsável ou do atleta que estão inválidos ou incompletos;
+    #C4B5FD:Sistema informa "Verifique os dados do responsável e do atleta e tente novamente";
+    #lightyellow:Usuário decide se deseja tentar novamente;
+  endif
+
+repeat while (Usuário deseja tentar novamente?) is (Sim)
+
+#lightyellow:Usuário fecha o modal e retorna à Landing Page da PKZ Lab;
+
+stop
+
+legend right
+  |= Cor |= Significado |
+  |<#C4B5FD>| Ação ou tela exibida pelo sistema |
+  |<#lightyellow>| Resultado de uma decisão do usuário |
+endlegend
+
+@enduml

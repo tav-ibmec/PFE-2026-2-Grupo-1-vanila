@@ -7,7 +7,7 @@ title AHT 06: Agendamento de Aula Experimental do Studio One to One
 
 note right
   Somente o agendamento de aula experimental.
-  Não há cadastro de usuário, login, sign up,
+  Não há cadastro de usuário, login, sign up.
   O agendamento do Studio One to One é aberto em um modal a partir da AHT 02.
   
   O botão "Voltar" existe em todas as telas do modal,
@@ -21,7 +21,7 @@ start
 #C4B5FD:Sistema exibe o calendário com os dias disponíveis e o botão "Voltar";
 
 if (Usuário clicou em "Voltar"?) then (Sim)
-  #lightyellow:Usuário retorna à navegaçao na Landing Page do Studio One to One;
+  #lightyellow:Usuário retorna à navegação na Landing Page do Studio One to One;
   note right: AHT 02
   stop
 else (Não)
