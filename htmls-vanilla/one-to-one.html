@@ -1,81 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="One to One: treinamento, nutrição e fisioterapia com acompanhamento individual. Agende uma aula experimental.">
-  <title>One to One</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-</head>
-<body class="oto">
-<a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Studio One to One: treinamento personalizado, fisioterapia e nutrição em um cuidado integrado."
+    />
+    <title>One to One</title>
+    <link rel="icon" href="data:," />
 
-<header class="nav">
-  <a class="logo" href="index.html" aria-label="One to One - voltar ao hub">ONE<small>to</small>ONE</a>
-  <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
-  <nav id="primary-navigation" aria-label="Navegação principal">
-    <a href="#home" aria-current="page">Home</a>
-    <a href="#sobre">Sobre nós</a>
-    <a href="#planos">Planos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-  <a class="ghost" href="#contato">Já sou aluno</a>
-  <a class="btn a" href="#contato">Matricule-se</a>
-</header>
+    <!-- Fontes do Google (Bebas Neue e Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<main id="main-content">
-  <section class="hero" id="home" aria-label="Amplie seu potencial.">
-    <h1>AMPLIE SEU<em>POTENCIAL</em></h1>
-    <svg class="bar" viewBox="0 0 520 150" aria-hidden="true"><rect x="40" y="68" width="440" height="14" rx="7" fill="#394552"/><g fill="#1f262e"><rect x="62" y="14" width="18" height="122" rx="9"/><rect x="82" y="26" width="16" height="98" rx="8"/><rect x="100" y="38" width="14" height="74" rx="7"/><rect x="440" y="14" width="18" height="122" rx="9"/><rect x="422" y="26" width="16" height="98" rx="8"/><rect x="406" y="38" width="14" height="74" rx="7"/></g></svg>
-    <div class="row"><a class="btn d" href="#contato">Saiba Mais!</a></div>
-  </section>
+    <!-- CSS do site, script do menu e script da agenda do professor -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/agendamento.js" defer></script>
+  </head>
+  <body class="oto">
+    <!-- Link que só aparece ao apertar Tab: pula direto para o conteúdo principal -->
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
-  <section class="about" id="sobre">
-    <div class="w">
-      <div class="ph"><img src="img/oto-sobre.jpg" srcset="img/oto-sobre.jpg 800w" sizes="(max-width: 600px) 100vw, 50vw" alt="Espaço de treino da One to One"></div>
-      <div>
-        <p class="eb">Sobre a One to One</p>
-        <h2>Seu treino,<br>NOSSA <span class="hl">PRIORIDADE.</span></h2>
-        <p>O Studio One to One é um espaço com um modelo exclusivo de atendimento integrado, que une treinamento personalizado, fisioterapia e nutrição. Somos um time integrado de profissionais que trabalha em conjunto para oferecer um cuidado completo e individualizado a cada pessoa.<br><br>Aqui, o aluno é acompanhado por personal trainers com suporte individual ou em grupos reduzidos de até 03 pessoas, garantindo um atendimento próximo, seguro e adaptado às suas necessidades.</p>
-        <div class="stats">
-          <div><b>10+</b><span>anos de<br>experiência*</span></div>
-          <div><b>200+</b><span>alunos<br>acompanhados*</span></div>
-          <div><b>15</b><span>profissionais<br>especializados*</span></div>
-        </div>
-        <small class="note">*Números ilustrativos para o protótipo; confirmar com o grupo antes da entrega.</small>
-       </div>
-    </div>
-  </section>
+    <!-- Cabeçalho: logo, menu e botões de ação -->
+    <header class="landing-header">
+      <a
+        class="landing-logo oto-landing-logo"
+        href="index.html"
+        aria-label="Voltar para Playmakerz e One to One"
+      >
+        <img
+          src="assets/imagens-padronizacao/assets/one-to-one/LOGO_OTO_1.png"
+          alt="One to One Studio"
+        />
+      </a>
 
-  <section id="diferencial">
-    <div class="w">
-      <p class="eb">Nosso diferencial</p>
-      <h2>Saúde, corpo e mente em equilíbrio.<br>ISSO É <span class="hl">ONE TO ONE.</span></h2>
-      <div class="trio">
-        <div>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h16M7 16v16M12 12v24M18 14v20"/><path d="M28 18c0-5 3-8 8-8s8 3 8 8M25 40h22l-2-22H27z"/></svg>
-          <h3>Treino</h3>
-          <p>Treinos adaptados aos seus objetivos, necessidades e momento, com acompanhamento próximo.</p>
-        </div>
-        <i aria-hidden="true">+</i>
-        <div>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 14c-8-6-17 2-13 12s10 14 13 14 9-4 13-14-5-18-13-12zM24 14c0-5 3-8 7-9"/></svg>
-          <h3>Nutrição</h3>
-          <p>Estratégias alimentares personalizadas para complementar o treino e potencializar seus resultados.</p>
-        </div>
-        <i aria-hidden="true">+</i>
-        <div>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="34" cy="12" r="5"/><path d="M5 38h38M9 30h30M12 30l10-6 8 2 4-8"/></svg>
-          <h3>Fisioterapia</h3>
-          <p>Avaliação e acompanhamento para treinar com segurança, prevenir lesões e potencializar sua evolução.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+      <!-- Botão do menu no celular -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="oto-navigation"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
 
-</body>
-</html>
+      <!-- Menu principal da página -->
+      <nav
+        class="landing-nav"
+        id="oto-navigation"
+        aria-label="Navegação principal"
+      >
+        <ul>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a class="hub-return" href="index.html">Hub</a></li>
+        </ul>
+      </nav>
+
+      <a class="student-link" href="#contato">Já sou aluno</a>
+      <a class="button button-blue header-cta" href="#planos">Matricule-se!</a>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero: a arte de fundo já traz a frase, então o h1 fica escondido só para leitores de tela -->
+      <section
+        class="landing-hero oto-hero"
+        id="home"
+        aria-labelledby="oto-title"
+      >
+        <h1 class="visually-hidden" id="oto-title">Amplie seu potencial</h1>
+        <a class="button button-dark oto-hero-button" href="#sobre"
+          >Saiba Mais!</a
+        >
+
+        <!-- Seta que leva para a próxima seção -->
+        <button
+          class="scroll-cue"
+          type="button"
+          data-scroll-target="sobre"
+          aria-label="Ir para Sobre a One to One"
+        >
+          <span aria-hidden="true"></span>
+        </button>
+      </section>
