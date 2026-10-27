@@ -1466,3 +1466,244 @@ nav ul {
   color: var(--livre-fg);
   font-weight: 600;
 }
+
+/* 9. FAQ, CHAMADA FINAL E RODAPÉ --------------------------------------------- */
+
+/* FAQ -------------------------------------------------------------------- */
+.faq-section {
+  padding: 64px 0;
+  background: var(--page);
+}
+
+.faq-section h2 {
+  margin-bottom: 32px;
+}
+
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Pergunta (summary): texto de um lado e a setinha do outro */
+.faq-list summary {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 4px 16px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  list-style: none;
+}
+
+/* Esconde o triângulo padrão do Safari */
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Setinha feita com bordas; gira quando a pergunta está aberta */
+.faq-list summary::after {
+  width: 11px;
+  height: 11px;
+  flex: none;
+  margin-right: 4px;
+  transform: rotate(45deg) translateY(-3px);
+  border-right: 2px solid var(--eyebrow);
+  border-bottom: 2px solid var(--eyebrow);
+  content: "";
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(225deg) translateY(-1px);
+}
+
+.faq-list details > p {
+  max-width: 1000px;
+  padding: 0 20px 22px 0;
+  color: var(--soft);
+  font-size: 0.98rem;
+}
+
+/* Chamada final (CTA) ---------------------------------------------------- */
+.closing-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0;
+  color: var(--cor-preto-pkz);
+  background: var(--cor-amarelo-pkz);
+}
+
+.pkz-closing::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../assets/imagens-padronizacao/assets/pkz/Pattern_foguetes.png")
+    center / 1400px auto;
+  content: "";
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.oto-closing {
+  color: var(--cor-azul-noite-oto);
+  background-color: var(--cor-azul-oto);
+}
+
+.oto-closing::before {
+  background-image: url("../assets/imagens-padronizacao/assets/one-to-one/Pattern_One_to_One.png");
+  opacity: 0.14;
+}
+
+.closing-cta h2 {
+  font-size: 7.6vw;
+}
+
+.closing-cta p {
+  margin: 16px 0 26px;
+  color: inherit;
+  font-size: 1.05rem;
+}
+
+/* No celular os dois botões ficam um embaixo do outro, com a mesma largura */
+.closing-cta .hero-actions {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closing-cta .button {
+  width: 100%;
+  min-height: 54px;
+  font-size: 1rem;
+}
+
+.pkz-closing .button-dark {
+  background: var(--cor-azul-pkz);
+  color: #fff;
+}
+
+.oto-closing .button-dark {
+  background: var(--cor-azul-escuro-oto);
+  color: #fff;
+}
+
+.dark-outline {
+  color: #141414;
+}
+
+.pkz-closing .dark-outline {
+  border-color: var(--cor-azul-pkz);
+  color: var(--cor-azul-pkz);
+}
+
+.oto-closing .button-outline {
+  border-color: var(--cor-azul-noite-oto);
+  color: var(--cor-azul-noite-oto);
+}
+
+/* Rodapé das landing pages ----------------------------------------------- */
+.landing-footer {
+  padding: 56px 0 40px;
+  background: var(--cor-preto-pkz);
+  color: #fff;
+}
+
+.oto-footer {
+  background: #fff;
+  color: var(--cor-azul-escuro-oto);
+}
+
+/* No celular: marca em cima ocupando a linha toda e menus em 2 colunas */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 16px;
+}
+
+.footer-brand-block {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-logo {
+  display: block;
+  width: 190px;
+  height: 60px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.footer-brand-block p {
+  color: var(--soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.oto-footer .footer-brand-block p {
+  color: #53616a;
+}
+
+.footer-brand-block small {
+  margin-top: 6px;
+  color: #aaa;
+  font-size: 0.78rem;
+}
+
+.oto-footer .footer-brand-block small {
+  color: #5e6e76;
+}
+
+/* Cada grupo de links do rodapé: título (strong) e a lista de links */
+.footer-grid nav {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.footer-grid nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.oto-footer .footer-grid nav {
+  border-left-color: #cbd6da;
+}
+
+.footer-grid nav strong {
+  margin-bottom: 4px;
+  font-size: 1.02rem;
+}
+
+.footer-grid nav a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #c8c8c8;
+  font-size: 0.95rem;
+}
+
+.oto-footer .footer-grid nav a {
+  color: #53616a;
+}
