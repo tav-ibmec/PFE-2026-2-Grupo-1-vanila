@@ -1,6 +1,9 @@
 # Daily Scrum 2
 
-**Data:** 22/10/2026
+Data: 22 de outubro de 2026
+Equipe: Grupo 1 — Sexta-feira
+Projeto: AP2 Vanilla
+Repositório: tav-ibmec/PFE-2026-2-Grupo-1-vanila
 
 ## Atividades realizadas e em andamento
 
