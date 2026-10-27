@@ -108,3 +108,68 @@ nav ul {
   color: #000;
   background: #fff;
 }
+
+/* 3. VARIÁVEIS E TEMAS ------------------------------------------------------- */
+
+/* Cores das duas marcas e medidas do layout, declaradas uma vez só */
+:root {
+  --cor-amarelo-pkz: #f1f000;
+  --cor-azul-pkz: #000080;
+  --cor-azul-claro-pkz: #3eb5e9;
+  --cor-preto-pkz: #141414;
+  --cor-azul-oto: #0898dd;
+  --cor-azul-escuro-oto: #033651;
+  --cor-azul-noite-oto: #001a27;
+  --cor-azul-gelo-oto: #b3ecff;
+  --cor-hub-escuro: #101820;
+  --cor-hub-azul: #315bc0;
+
+  --gutter: 20px; /* margem lateral do conteúdo */
+  --wrap-max: 1560px; /* largura máxima do conteúdo */
+}
+
+/* Tema da página PKZ (fundo escuro). As seções usam --page, --ink etc.,
+   então cada página só troca os valores dessas variáveis. */
+.pkz {
+  --page: var(--cor-preto-pkz);
+  --ink: #fff;
+  --soft: #d5d5d5;
+  --accent: var(--cor-amarelo-pkz);
+  --eyebrow: var(--cor-azul-claro-pkz);
+  --line: #373737;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+/* Tema da página One to One (fundo branco) */
+.oto {
+  --page: #fff;
+  --ink: var(--cor-azul-escuro-oto);
+  --soft: #53616a;
+  --accent: var(--cor-azul-oto);
+  --eyebrow: var(--cor-azul-escuro-oto);
+  --line: #dfe6e9;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+/* Tema do Hub */
+.hub {
+  background: #fff;
+  color: var(--cor-hub-escuro);
+  font-family: "Nunito", Arial, sans-serif;
+}
+
+/* Títulos das landing pages usam a Cocogoose
+   (o h1 da One to One fica escondido, por isso só o título da agenda entra aqui) */
+.pkz h1,
+.pkz h2,
+.pkz h3,
+.oto h2,
+.oto h3,
+.oto .agendamento h1 {
+  font-family: CocogooseProTrial, "Outfit", Arial, sans-serif;
+  font-weight: 700;
+}
