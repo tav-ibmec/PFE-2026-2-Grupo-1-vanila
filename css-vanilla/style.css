@@ -1707,3 +1707,480 @@ nav ul {
 .oto-footer .footer-grid nav a {
   color: #53616a;
 }
+
+/* 10. HUB (index.html) ---------------------------------------------------------- */
+.hub-wrap {
+  width: calc(100% - 2 * var(--gutter));
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cabeçalho transparente por cima da foto do hero */
+.hub-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 16px;
+  color: #fff;
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logos do topo */
+.hub-brand {
+  display: flex;
+  width: 72px;
+  height: 60px;
+  flex: none;
+  align-items: center;
+}
+
+.hub-brand.oto-brand {
+  width: 100px;
+}
+
+.hub-brand img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Linha vertical entre as logos */
+.brand-divider {
+  width: 1px;
+  height: 42px;
+  flex: none;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.hub-header .menu-toggle {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--cor-hub-escuro);
+}
+
+/* Menu do celular: painel escondido até clicar no botão ☰ */
+.hub-nav {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  padding: 8px 18px;
+  border-radius: 18px;
+  background: var(--cor-hub-escuro);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.hub-nav.is-open {
+  display: flex;
+}
+
+.hub-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.hub-nav a,
+.hub-nav .hub-contact-trigger {
+  display: block;
+  width: 100%;
+  padding: 13px 4px;
+}
+
+/* Linha divisória entre os links do menu (o botão Contato fica sem linha) */
+.hub-nav li + li > a {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Botão "Contato" com cara de link (abre a janela de WhatsApp) */
+.hub-contact-trigger {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+/* Hero do Hub: foto da academia com dois degradês escuros por cima */
+.hub-hero {
+  position: relative;
+  display: flex;
+  min-height: 600px;
+  align-items: center;
+  overflow: hidden;
+  padding: 112px 0 84px;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 10, 15, 0.62),
+      rgba(6, 10, 15, 0.38) 55%,
+      rgba(6, 10, 15, 0.12)
+    ),
+    linear-gradient(0deg, rgba(6, 10, 15, 0.45), rgba(6, 10, 15, 0) 40%),
+    url("../assets/imagens-padronizacao/assets/hub/WhatsApp_Image_2026-09-19_at_19.57.55_2.jpg")
+      65% center / cover no-repeat,
+    #0d1114;
+}
+
+.hub-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hub-hero h1 {
+  max-width: 700px;
+  font:
+    400 12vw/0.98 "Bebas Neue",
+    Impact,
+    sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.hub-hero h1 span {
+  color: #3f6fe3;
+}
+
+.hub-hero-content > p {
+  max-width: 560px;
+  margin: 20px 0 26px;
+  color: #fff;
+  font-size: 0.98rem;
+}
+
+/* Diferenciais: um embaixo do outro no celular */
+.hub-features {
+  display: flex;
+  max-width: 560px;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.hub-features li {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.hub-features img {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  object-fit: contain;
+}
+
+.hub-hero .scroll-cue {
+  bottom: 10px;
+  width: 44px;
+  height: 34px;
+  color: #fff;
+}
+
+/* Seção com os cartões das empresas */
+.hub-companies {
+  padding: 44px 0 56px;
+  background: #fff;
+}
+
+.hub-kicker {
+  margin-bottom: 10px;
+  color: #0b3a66;
+  font:
+    400 1rem/1.1 "Bebas Neue",
+    Impact,
+    sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.hub-companies h2 {
+  max-width: 420px;
+  margin-bottom: 28px;
+  color: var(--cor-hub-azul);
+  font:
+    400 2rem/1.05 "Bebas Neue",
+    Impact,
+    sans-serif;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.company-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 22px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 7px 28px rgba(0, 0, 0, 0.14);
+  text-align: center;
+}
+
+/* Imagem do topo do cartão */
+.company-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #071a3a;
+}
+
+.company-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pkz-card-image > img {
+  object-position: right top;
+}
+
+/* Degradê escuro para o texto branco ficar legível em cima da foto */
+.pkz-card-image::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(4, 14, 39, 0.86),
+    rgba(4, 14, 39, 0.45) 55%,
+    rgba(4, 14, 39, 0) 75%
+  );
+  content: "";
+}
+
+/* Texto em cima da foto: o tamanho acompanha a largura do cartão (vw) */
+.pkz-card-image > h3 {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 5.8vw;
+  transform: translateY(-50%);
+  color: #fff;
+  font:
+    700 5vw/1.1 "Nunito",
+    Arial,
+    sans-serif;
+  text-align: left;
+}
+
+.pkz-card-image strong {
+  color: var(--cor-amarelo-pkz);
+  font-size: 1.18em;
+}
+
+.oto-card-image > img {
+  object-position: center 40%;
+}
+
+.company-logo {
+  display: block;
+  width: 120px;
+  height: 45px;
+  margin: 18px auto 10px;
+  object-fit: contain;
+}
+
+.company-copy {
+  max-width: 470px;
+  padding: 0 22px;
+}
+
+.company-copy p {
+  margin-bottom: 12px;
+  color: #171717;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.hub-button {
+  display: inline-flex;
+  min-width: 190px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0 24px;
+  border-radius: 999px;
+  color: #fff;
+  font:
+    400 1.05rem/1 "Bebas Neue",
+    Impact,
+    sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.pkz-button {
+  background: var(--cor-azul-pkz);
+}
+
+.oto-button {
+  background: var(--cor-azul-oto);
+  color: var(--cor-azul-noite-oto);
+}
+
+/* Rodapé do Hub */
+.hub-footer {
+  padding: 30px 0;
+  background: #141414;
+  color: #fff;
+  text-align: center;
+}
+
+.hub-footer-inner {
+  display: grid;
+  justify-items: center;
+  gap: 26px;
+}
+
+.footer-brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-brands img:first-child {
+  width: 100px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.footer-brands img:last-child {
+  width: 80px;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+.hub-footer .brand-divider {
+  height: 44px;
+}
+
+.footer-nav {
+  color: #c4c4c4;
+  font-size: 0.9rem;
+}
+
+/* Links do rodapé lado a lado, quebrando linha se não couber */
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 24px;
+}
+
+.footer-nav a,
+.footer-nav .hub-contact-trigger {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.hub-footer small {
+  color: #8f8f8f;
+  font-size: 0.78rem;
+}
+
+/* Janela (dialog) de contato do Hub: mesma ideia de largura do modal da agenda */
+.hub-contact-dialog {
+  width: min(92vw, 480px);
+  max-width: calc(100% - 32px);
+  padding: 28px 22px 24px;
+  border: 0;
+  border-radius: 20px;
+  color: var(--cor-hub-escuro);
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hub-contact-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hub-contact-dialog-content {
+  position: relative;
+}
+
+.hub-contact-dialog h2 {
+  margin: 0 44px 20px 0;
+  color: var(--cor-hub-azul);
+  font:
+    700 1.3rem/1.25 "Nunito",
+    Arial,
+    sans-serif;
+}
+
+.hub-contact-options {
+  display: grid;
+  gap: 12px;
+}
+
+.hub-contact-option {
+  display: flex;
+  min-height: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pkz-contact-option {
+  background: var(--cor-azul-pkz);
+  color: #fff;
+}
+
+.oto-contact-option {
+  background: var(--cor-azul-oto);
+  color: var(--cor-azul-noite-oto);
+}
+
+/* Botão × no canto da janela */
+.hub-contact-close {
+  position: absolute;
+  top: -14px;
+  right: -8px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #f2f2f2;
+  color: var(--cor-hub-escuro);
+  font:
+    400 1.5rem/1 Arial,
+    sans-serif;
+  cursor: pointer;
+}
