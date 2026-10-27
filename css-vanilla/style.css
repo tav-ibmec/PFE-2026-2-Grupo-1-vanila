@@ -487,3 +487,166 @@ nav ul {
 .landing-header .header-cta {
   display: none;
 }
+
+/* 6. HEROS ------------------------------------------------------------------ */
+
+/* Hero PKZ ---------------------------------------------------------------
+   No celular em pé: texto em cima e o garoto embaixo, ancorado à direita.
+   --photo-h é a altura reservada para a foto. */
+.landing-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 28px 28px;
+  text-align: center;
+}
+
+.pkz-hero {
+  --photo-h: 118vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 6% var(--photo-h);
+  color: #fff;
+  background-color: #060e1f;
+  /* 4 camadas: 2 degradês escuros + a foto ancorada embaixo + a mesma foto como céu */
+  background-image:
+    linear-gradient(180deg, rgba(2, 8, 26, 0.55), rgba(2, 8, 26, 0) 46%),
+    linear-gradient(
+      180deg,
+      rgba(6, 14, 31, 0) 0%,
+      rgba(6, 14, 31, 0.35) 60%,
+      #060e1f 100%
+    ),
+    url("../assets/imagens-padronizacao/assets/hub/Gemini_Generated_Image_lxjfrllxjfrllxjf.jpg"),
+    url("../assets/imagens-padronizacao/assets/hub/Gemini_Generated_Image_lxjfrllxjfrllxjf.jpg");
+  background-repeat: no-repeat;
+  /* o 2º degradê cobre só a parte de cima (a altura toda menos a foto) */
+  background-size:
+    100% 100%,
+    100% calc(100% - var(--photo-h) + 2px),
+    auto var(--photo-h),
+    cover;
+  background-position:
+    0 0,
+    0 0,
+    right bottom,
+    left top;
+}
+
+/* Névoa escura que esconde a emenda entre o céu e o topo da foto
+   (lado esquerdo, longe do garoto) */
+.pkz-hero::before {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  bottom: calc(var(--photo-h) - 90px);
+  width: 85%;
+  height: 180px;
+  background: radial-gradient(
+    ellipse 100% 50% at 0 50%,
+    #060e1f 25%,
+    rgba(6, 14, 31, 0) 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.pkz-hero .hero-inner {
+  padding-bottom: 16px;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.pkz-hero h1 {
+  font-size: 8.6vw;
+  line-height: 1.1;
+}
+
+.pkz-hero h1 span {
+  color: var(--cor-amarelo-pkz);
+}
+
+.pkz-hero .hero-inner > p {
+  max-width: 640px;
+  margin: 20px auto 26px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.pkz-hero .button-outline {
+  color: var(--cor-amarelo-pkz);
+}
+
+/* Quebra de linha que só aparece no desktop */
+.desktop-break {
+  display: none;
+}
+
+/* Seta no rodapé do hero que leva para a próxima seção */
+.scroll-cue {
+  position: absolute;
+  z-index: 2;
+  right: 50%;
+  bottom: 0;
+  display: grid;
+  width: 64px;
+  height: 34px;
+  place-items: center;
+  transform: translateX(50%);
+  border: 0;
+  border-radius: 50% 50% 0 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* A seta é um quadrado com duas bordas, girado 45 graus */
+.scroll-cue span {
+  width: 12px;
+  height: 12px;
+  transform: translateY(1px) rotate(45deg);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.pkz-hero .scroll-cue {
+  background: var(--cor-preto-pkz);
+  color: var(--cor-amarelo-pkz);
+}
+
+/* Hero One to One --------------------------------------------------------
+   A arte de fundo já traz a frase "Amplie seu potencial".
+   No celular ela fica com 150% da largura da tela (as bordas são cortadas).
+   --clear é o espaço livre para o menu; os valores em vw posicionam a arte
+   e o botão de acordo com o tamanho dela. */
+.oto-hero {
+  --clear: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--clear) + 51vw) 6% 64px;
+  background: #00466f
+    url("../assets/imagens-padronizacao/assets/hub/Prancheta_4.jpg") no-repeat;
+  background-size: 150vw auto;
+  background-position: 50% calc(var(--clear) - 20vw);
+}
+
+.oto-hero-button {
+  position: relative;
+  z-index: 2;
+  min-width: 170px;
+  background: var(--cor-azul-escuro-oto);
+  color: #fff;
+}
+
+.oto-hero .scroll-cue {
+  background: #fff;
+  color: var(--cor-azul-escuro-oto);
+}
