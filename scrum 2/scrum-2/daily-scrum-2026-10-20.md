@@ -1,4 +1,4 @@
-# Daily Scrum — AP2 Vanilla
+# Daily Scrum 1
 
 **Data:** 20 de outubro de 2026  
 **Equipe:** Grupo 1 — Sexta-feira  
