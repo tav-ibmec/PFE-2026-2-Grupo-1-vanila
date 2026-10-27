@@ -12,12 +12,13 @@ Este documento descreve a visão do site das marcas One to One e PKZ Lab. O obje
 
 ### 1.2 Público-alvo
 
-Gestores das marcas, equipe de desenvolvimento e demais envolvidos que precisem compreender o problema e a proposta.
+Pessoas interessadas em treinamento presencial, seja individualizado (One to One) ou focado em performance (PKZ Lab).  
+Inclui também potenciais alunos, alunos já matriculados e responsáveis.  
 
 ### 1.3 Escopo do sistema
 
 O sistema é um site institucional das marcas One to One e PKZ Lab. O visitante conhece as duas linhas, acessa a página de cada marca e chega a uma tela de cadastro.  
-A entrega contempla a página inicial, a página de One to One, a página de PKZ Lab e a página de cadastro.  
+A entrega contempla a página inicial, a página de One to One, a página de PKZ Lab, a página de cadastro e a página de agendamento de aulas.
 
 ---
 
@@ -36,7 +37,7 @@ A entrega contempla a página inicial, a página de One to One, a página de PKZ
 
 ### 2.3 Proposta de solução
 
-Desenvolver uma interface web responsiva e intuitiva, apresentando as duas marcas de forma independente e complementar na Home, direcionando o visitante para páginas específicas com propostas claras e conduzindo-o a um formulário de cadastro e integração direta com o WhatsApp de atendimento.
+Desenvolver uma interface web responsiva e intuitiva, apresentando as duas marcas de forma independente e complementar na Home, direcionando o visitante para páginas específicas com propostas claras e conduzindo-o a um formulário de cadastro, à possibilidade de agendar aulas e à integração direta com o WhatsApp de atendimento.
 
 ### 2.4 Declaração de posicionamento
 
@@ -63,7 +64,7 @@ Visitante / Potencial Aluno: Pessoa interessada em conhecer as marcas, entender 
 
 ### 3.3 Necessidades e expectativas
 
-O visitante precisa distinguir as duas marcas, compreender o que cada uma oferece e encontrar o cadastro e o contato.
+O visitante precisa distinguir as duas marcas, compreender o que cada uma oferece, encontrar o cadastro, agendar aulas e o contato.
 
 ---
 
@@ -76,6 +77,8 @@ O visitante precisa distinguir as duas marcas, compreender o que cada uma oferec
 -Página PKZ Lab: conteúdo de performance esportiva, portfólio, equipe, depoimentos, perguntas frequentes e acesso ao cadastro.  
 -Cadastro: formulário de ingresso.  
 -Contato: acesso ao atendimento por WhatsApp.  
+Contato: acesso ao atendimento por WhatsApp.
+- Agendar aulas: permite ao visitante solicitar o agendamento de aulas presenciais (individualizadas na One to One ou de performance na PKZ Lab)  
 
 ### 4.2 Diferenciais em relação a soluções existentes
 
@@ -100,6 +103,7 @@ RF04. Cada página de marca deve apresentar proposição, portfólio, equipe, de
 RF05. O site deve oferecer acesso à página de cadastro a partir das páginas de marca.  
 RF06. O site deve apresentar um formulário de cadastro.  
 RF07. O site deve oferecer acesso ao atendimento por WhatsApp.  
+RF08. O site deve oferecer a possibilidade de agendar aulas a partir das páginas de marca e da página inicial.  
 
 ### 5.2 Requisitos não funcionais
 
