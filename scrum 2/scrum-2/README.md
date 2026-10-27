@@ -1,6 +1,6 @@
-# Documentação Scrum — AP2 Vanilla
+# Documentação Scrum — Vanilla
 
-**Projeto:** AP2 Vanilla  
+**Projeto:** Vanilla  
 **Equipe:** Grupo 1 — Sexta-feira  
 **Repositório:** `tav-ibmec/PFE-2026-2-Grupo-1-vanila`  
 **Data de início desta documentação:** 20/10/2026
