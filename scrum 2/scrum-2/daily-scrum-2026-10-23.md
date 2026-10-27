@@ -1,5 +1,10 @@
 # Daily Scrum 3
 
+**Data:** 23 de outubro de 2026  
+**Equipe:** Grupo 1 — Sexta-feira  
+**Projeto:** Vanilla  
+**Repositório:** `tav-ibmec/PFE-2026-2-Grupo-1-vanila`
+
 ## Atividades e responsabilidades de cada participante
 
 - **Lucas:** agendamento dos sites PKZ e One to One.
