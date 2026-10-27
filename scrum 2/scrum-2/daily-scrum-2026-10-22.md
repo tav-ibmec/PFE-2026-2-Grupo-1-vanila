@@ -2,7 +2,7 @@
 
 **Data:** 22 de outubro de 2026  
 **Equipe:** Grupo 1 — Sexta-feira  
-**Projeto:** AP2 Vanilla  
+**Projeto:** Vanilla  
 **Repositório:** `tav-ibmec/PFE-2026-2-Grupo-1-vanila`
 
 ## Atividades realizadas e em andamento
