@@ -474,6 +474,143 @@
         </div>
       </section>
 
+      <!-- Contato: dados da One to One (address) e agenda da aula experimental -->
+      <section
+        class="contact-section"
+        id="contato"
+        aria-labelledby="oto-contact-title"
+      >
+        <img
+          class="side-decoration deco-wide deco-left"
+          src="assets/imagens-padronizacao/assets/one-to-one/SETAS_1.png"
+          alt=""
+          loading="lazy"
+        />
+        <div class="content-wrap contact-panel oto-contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow">ENTRE EM CONTATO</p>
+            <h2 id="oto-contact-title">
+              Pronto para <span class="nowrap">se tornar</span><br /><span
+                >SUA MELHOR VERSÃO?</span
+              >
+            </h2>
+            <p>
+              Chegou o momento de investir em um acompanhamento que realmente
+              entende o seu corpo e a sua rotina.
+            </p>
+            <p>
+              Não deixe a sua saúde para a próxima segunda-feira. Mande uma
+              mensagem para a nossa equipe agora mesmo e dê o primeiro passo
+              para construir a sua melhor versão!
+            </p>
+
+            <!-- Links externos abrem em nova aba sempre com rel="noopener noreferrer" -->
+            <address>
+              <ul class="contact-details">
+                <li>
+                  <img
+                    class="contact-icon-slot"
+                    src="assets/prototype-derived/contact-icons/oto-address.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="contact-content"
+                    ><span class="contact-label">Endereço</span
+                    ><a
+                      href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Armando%20Lombardi%2C%20949%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Av. Armando Lombardi, 949 - Barra da Tijuca<span
+                        class="visually-hidden"
+                      >
+                        (abre no Google Maps em nova aba)</span
+                      ></a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <img
+                    class="contact-icon-slot"
+                    src="assets/prototype-derived/contact-icons/oto-phone.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="contact-content"
+                    ><span class="contact-label">Telefone / WhatsApp</span
+                    ><a
+                      href="https://wa.me/5521971067347"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Conversar com a One to One pelo WhatsApp no número +55 21 97106-7347"
+                      >+55 21 97106-7347</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <img
+                    class="contact-icon-slot"
+                    src="assets/prototype-derived/contact-icons/oto-email.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="contact-content"
+                    ><span class="contact-label">E-mail</span
+                    ><a
+                      href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=one.to.one%40gmail.com&amp;su=Contato%20pelo%20site%20-%20One%20to%20One"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >one.to.one@gmail.com<span class="visually-hidden">
+                        (escrever e-mail, abre em nova aba)</span
+                      ></a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <!-- Agenda da aula experimental: HTML e JavaScript do professor Thiago, sem nenhuma alteração.
+               Única adaptação: o <main> do arquivo  virou <div class="agendamento" id="agendar">,
+               porque a página já tem um <main>.
+               O "prettier-ignore" faz o Prettier não mexer no código dele. -->
+          <!-- prettier-ignore -->
+          <div class="agendamento" id="agendar">
+            <h1>Agende sua aula experimental</h1>
+            <p class="sub">Grátis e sem cadastro. Escolha um horário livre desta semana.</p>
+            <div class="legenda">
+              <span><i style="background:var(--livre)"></i>Livre</span>
+              <span><i style="background:var(--ocupado)"></i>Ocupado ou já passou</span>
+            </div>
+            <div class="nav">
+              <button id="anterior" type="button">← Anterior</button>
+              <span id="semanaTexto"></span>
+              <button id="proxima" type="button">Próxima →</button>
+            </div>
+            <div class="scroll"><table id="grade" aria-label="Horários da semana"></table></div>
+            <div id="status" role="status" aria-live="polite"></div>
+            <button class="reset" id="reset">Limpar reservas (só para testes)</button>
+            <button class="reset" id="verDados" type="button">Ver dados salvos</button>
+            <pre id="dados" hidden></pre>
+          </div>
+
+          <!-- prettier-ignore -->
+          <dialog id="modal">
+            <form id="form">
+              <h2>Confirmar horário</h2>
+              <div id="resumo" style="color:var(--muted)"></div>
+              <label>Nome <input name="nome" required minlength="2" autocomplete="name"></label>
+              <label>E-mail <input name="email" type="email" required autocomplete="email"></label>
+              <label>Telefone <input name="telefone" type="tel" required pattern="[0-9 ()+\-]{8,}" title="Use só números, espaços, parênteses ou hífen" autocomplete="tel"></label>
+              <div id="erroForm" class="erro" style="color:var(--erro);min-height:1.4em;margin-top:8px"></div>
+              <div class="acoes">
+                <button type="button" id="cancelar">Cancelar</button>
+                <button type="submit" id="confirmar">Reservar</button>
+              </div>
+            </form>
+          </dialog>
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
