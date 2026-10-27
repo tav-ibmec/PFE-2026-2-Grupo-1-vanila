@@ -1,6 +1,6 @@
-# Product Backlog — AP2 Vanilla
+# Product Backlog — Vanilla
 
-**Projeto:** AP2 Vanilla  
+**Projeto:** Vanilla  
 **Equipe:** Grupo 1 — Sexta-feira  
 **Fonte principal para validação:** enunciado da AP2 e protótipo do grupo  
 **Status:** versão inicial — revisar com os requisitos oficiais
