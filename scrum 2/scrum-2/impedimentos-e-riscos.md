@@ -1,4 +1,4 @@
-# Impedimentos e Pontos de Atenção — AP2 Vanilla
+# Impedimentos e Pontos de Atenção — Vanilla
 
 **Última atualização:** 20/10/2026
 

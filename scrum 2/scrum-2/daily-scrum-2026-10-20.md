@@ -1,9 +1,9 @@
-# Daily Scrum — AP2 Vanilla
+# Daily Scrum 1
 
 **Data:** 20 de outubro de 2026  
 **Equipe:** Grupo 1 — Sexta-feira  
-**Projeto:** AP2 Vanilla  
-**Repositório:** `tav-ibmec/PFE-2026-2-AP2-Vanilla-Grupo1-sexta`
+**Projeto:** Vanilla  
+**Repositório:** `tav-ibmec/PFE-2026-2-Grupo-1-vanila`
 
 ## Objetivo da reunião
 Alinhar as ideias iniciais do grupo e organizar os próximos passos para o desenvolvimento do projeto, utilizando o protótipo como referência.

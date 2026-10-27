@@ -1,9 +1,9 @@
 # Daily Scrum 4
 
-**Data:** 26 de Outubro de 2026  
+**Data:** 26 de outubro de 2026  
 **Equipe:** Grupo 1 — Sexta-feira  
-**Projeto:** AP2 Vanilla  
-**Repositório:** `tav-ibmec/PFE-2026-2-AP2-Vanilla-Grupo1-sexta`
+**Projeto:** Vanilla  
+**Repositório:** `tav-ibmec/PFE-2026-2-Grupo-1-vanila`
 
 ## Atividades realizadas e em andamento
 
