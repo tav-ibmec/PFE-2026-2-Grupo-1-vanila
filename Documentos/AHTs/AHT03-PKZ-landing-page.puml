@@ -8,42 +8,43 @@ note right
 
  Atualizações:
  A página de cadastro da AHT 05 foi retirada, pois não será implementada.
- O formulário de aula experimental será aberto em um modal, correspondente à AHT 07.
- O botão "Voltar" existe na Landing Page e no modal, mas é representado
- uma única vez em cada fluxo para evitar redundância.
+ A agenda da aula experimental fica na seção Contato e corresponde à AHT 07.
+ A volta à Página Inicial é feita pelo link "Hub" do menu ou pelos logos do topo
+ e do rodapé, mas é representada uma única vez para evitar redundância.
 end note
 
 start
 
-#C4B5FD:Usuário chega à Landing Page da PKZ Lab;
-#C4B5FD:Sistema exibe Hero Section da PKZ Lab, com a opção "Agendar aula experimental", a opção "Saiba mais" e o botão "Voltar à Página Inicial";
+#1E90FF:Usuário chega à Landing Page da PKZ Lab;
+#1E90FF:Sistema exibe Hero Section da PKZ Lab, com os botões "Agende uma aula" e "Saiba Mais", e o menu com o link "Hub";
 
-if (Usuário clicou em "Voltar à Página Inicial"?) then (sim)
-  #lightyellow:Usuário retorna à Página Inicial e ao Hub de Marcas;
+if (Usuário clicou em "Hub" no menu?) then (sim)
+  #FFF07F:Usuário retorna à Página Inicial e ao Hub de Marcas;
   note right: AHT 01
   stop
 else (não)
-  #lightyellow:Usuário continua na Landing Page da PKZ Lab;
+  #FFF07F:Usuário continua na Landing Page da PKZ Lab;
 endif
 
-#C4B5FD:Sistema exibe informações sobre a PKZ Lab e seus diferenciais;
-#C4B5FD:Sistema exibe catálogo de pacotes (somente com benefícios, sem valores);
-#C4B5FD:Sistema exibe avaliações de responsáveis e atletas;
-#C4B5FD:Sistema exibe FAQ com as 5 principais dúvidas;
-#C4B5FD:Sistema exibe CTA com a opção "Agende uma aula" e o botão "Voltar à Página Inicial";
+#1E90FF:Sistema exibe informações sobre a PKZ Lab e seus diferenciais;
+#1E90FF:Sistema exibe catálogo de pacotes (somente com benefícios, sem valores), cada um com o botão "Matricule-se!";
+#1E90FF:Sistema exibe avaliações de responsáveis e atletas;
+#1E90FF:Sistema exibe a seção Contato, com endereço, WhatsApp, e-mail e a agenda da aula experimental;
+#1E90FF:Sistema exibe FAQ com as 5 principais dúvidas;
+#1E90FF:Sistema exibe CTA com os botões "Agende uma aula" e "Matricule-se";
 
 if (Usuário deseja agendar uma aula experimental?) then (sim)
-  #lightyellow:Usuário clica em "Agende uma aula";
-  #C4B5FD:Sistema abre o modal de agendamento da aula experimental;
+  #FFF07F:Usuário clica em "Agende uma aula" (no hero ou no CTA) ou no "Matricule-se!" de um pacote;
+  #1E90FF:Sistema leva o usuário até a agenda, na seção Contato;
   note right: AHT 07
 else (não)
-  #lightyellow:Usuário continua explorando a Landing Page;
+  #FFF07F:Usuário continua explorando a Landing Page;
 endif
 
 legend right
-  |Cor | Significado|
-  |<#C4B5FD>| Ação ou tela exibida pelo sistema |
-  |<#lightyellow>| Resultado de uma decisão do usuário |
+  |= Cor |= Significado |
+  |<#1E90FF>| Ação ou tela exibida pelo sistema |
+  |<#FFF07F>| Resultado de uma decisão do usuário |
 endlegend
 
 stop
