@@ -2184,3 +2184,1212 @@ nav ul {
     sans-serif;
   cursor: pointer;
 }
+
+/* ==========================================================================
+   11. MEDIA QUERIES (mobile first: cada bloco vale da largura dele para cima)
+   ========================================================================== */
+
+/* >= 601px · phablets e celulares deitados ------------------------------------ */
+@media (min-width: 601px) {
+  /* Estrutura comum */
+  .about-section h2,
+  .difference-section h2,
+  .plans-section h2,
+  .reviews-section h2,
+  .contact-copy h2,
+  .faq-section h2 {
+    font-size: 2.6rem;
+  }
+
+  .oto .section-head.has-deco {
+    padding-right: 96px;
+  }
+
+  .landing-header {
+    padding-left: 22px;
+  }
+
+  /* Hero PKZ em pé: a foto do garoto fica com 600px de altura */
+  .pkz-hero {
+    --photo-h: 600px;
+  }
+
+  .pkz-hero .hero-inner > p {
+    font-size: 1.15rem;
+  }
+
+  /* Hero One to One em pé: a arte já começa no topo */
+  .oto-hero {
+    padding-top: 71vw;
+    background-position: 50% 0;
+  }
+
+  /* Sobre */
+  .about-photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .stats strong {
+    font-size: 4.1rem;
+  }
+
+  .stats span {
+    font-size: 1rem;
+  }
+
+  /* Planos em 2 colunas (o max-width é a soma das 2 colunas com o espaço entre elas) */
+  .pkz-plans-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 764px;
+  }
+
+  .oto-plans-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 24px;
+    max-width: 704px;
+  }
+
+  .plan-card h3,
+  .pkz-plans-grid .plan-card h3 {
+    font-size: 3.5vw;
+  }
+
+  /* Avaliações em 2 colunas; a 5ª (que sobra sozinha) fica centralizada */
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .review-card:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 11px);
+  }
+
+  /* Contato e agenda */
+  .contact-panel {
+    padding: 34px 26px 26px;
+  }
+
+  .agendamento {
+    padding: 26px 20px 24px;
+  }
+
+  .agendamento h1 {
+    font-size: 1.75rem;
+  }
+
+  /* Agenda com mais espaço: semana e botões numa linha só e letras maiores */
+  .agendamento .nav {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .agendamento #semanaTexto {
+    grid-column: auto;
+    order: 0;
+  }
+
+  .agendamento th,
+  .agendamento td {
+    padding: 6px 3px;
+  }
+
+  .agendamento th {
+    font-size: 0.9rem;
+  }
+
+  .agendamento th small {
+    font-size: 0.78rem;
+  }
+
+  .agendamento tbody th {
+    font-size: 0.85rem;
+  }
+
+  .agendamento thead th:first-child {
+    width: 4em;
+  }
+
+  .agendamento .slot {
+    min-height: 36px;
+    font-size: 0.85rem;
+  }
+
+  /* Rodapé em 3 colunas */
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Botões da chamada final voltam a ficar lado a lado */
+  .closing-cta .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+  }
+
+  .closing-cta .button {
+    width: auto;
+    min-width: 230px;
+  }
+
+  /* Hub */
+  .hub-features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+  }
+
+  .hub-features li {
+    flex: 1 1 140px;
+  }
+
+  .hub-companies h2 {
+    font-size: 2.5rem;
+  }
+
+  .pkz-card-image > h3 {
+    left: 36px;
+    font-size: 2rem;
+  }
+
+  .company-copy {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+/* >= 601px com a tela deitada (landscape): os heros mudam de formato ---------- */
+@media (min-width: 601px) and (orientation: landscape) {
+  /* Hero PKZ: o garoto fica do lado direito e o texto no meio, ocupando a tela */
+  .pkz-hero {
+    min-height: 100vh;
+    justify-content: center;
+    padding: 104px 0 64px;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0, 9, 35, 0.88),
+        rgba(0, 16, 57, 0.4) 55%,
+        rgba(0, 13, 42, 0.08)
+      ),
+      url("../assets/imagens-padronizacao/assets/hub/Gemini_Generated_Image_lxjfrllxjfrllxjf.jpg");
+    background-size:
+      100% 100%,
+      cover;
+    background-position:
+      0 0,
+      right top;
+  }
+
+  .pkz-hero::before {
+    display: none;
+  }
+
+  .pkz-hero .hero-inner {
+    width: 100%;
+    max-width: none;
+    padding: 0 4vw;
+    align-self: stretch;
+  }
+
+  /* Deitado, o garoto ocupa uns 42% da altura da tela (42vh) à direita;
+     o título usa o espaço que sobra */
+  .pkz-hero h1 {
+    font-size: calc((100vw - 42vh - 24px) / 11);
+  }
+
+  /* O texto pequeno termina antes do garoto */
+  .pkz-hero .hero-inner > p {
+    max-width: calc(100vw - 84vh - 28px);
+    font-size: 0.95rem;
+  }
+
+  /* Hero One to One: a arte passa a ter a largura da tela */
+  .oto-hero {
+    padding-top: calc(var(--clear) + 34vw);
+    background-size: 100vw auto;
+    background-position: 50% calc(var(--clear) - 13.33vw);
+  }
+}
+
+/* >= 768px · tablets ---------------------------------------------------------- */
+@media (min-width: 768px) {
+  :root {
+    --gutter: 40px;
+  }
+
+  /* Estrutura comum */
+  .eyebrow {
+    margin-bottom: 22px;
+    font-size: 0.82rem;
+  }
+
+  .about-content .eyebrow::before,
+  .reviews-section .eyebrow::before,
+  .contact-copy .eyebrow::before,
+  .faq-section .eyebrow::before {
+    width: 70px;
+    margin-right: 14px;
+  }
+
+  .plans-section .eyebrow::before,
+  .plans-section .eyebrow::after {
+    width: 70px;
+  }
+
+  .pkz .section-head.has-deco .eyebrow::before,
+  .pkz .section-head.has-deco .eyebrow::after {
+    width: 70px;
+  }
+
+  .button {
+    min-height: 54px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .hero-actions {
+    gap: 22px;
+  }
+
+  /* Cabeçalho e heros */
+  .landing-header {
+    top: 24px;
+    width: calc(100% - 2 * var(--gutter));
+    min-height: 74px;
+    padding: 10px 14px 10px 26px;
+  }
+
+  .landing-logo {
+    width: 170px;
+    max-width: none;
+    height: 52px;
+  }
+
+  .landing-hero {
+    border-radius: 0 0 46px 46px;
+  }
+
+  .pkz-hero {
+    padding-top: 150px;
+  }
+
+  .oto-hero {
+    --clear: 128px;
+    padding-bottom: 76px;
+  }
+
+  .scroll-cue {
+    width: 74px;
+    height: 40px;
+  }
+
+  /* Sobre */
+  .about-section {
+    padding: 88px 0;
+  }
+
+  .about-content > p {
+    font-size: 1.12rem;
+  }
+
+  .about-content h3.closing-line {
+    font-size: 1.15rem;
+  }
+
+  .stats {
+    gap: 20px;
+    max-width: 590px;
+    margin-top: 44px;
+  }
+
+  .stats span {
+    letter-spacing: 0.03em;
+  }
+
+  /* Diferencial */
+  .difference-section {
+    padding: 96px 0 104px;
+  }
+
+  .difference-section .section-head {
+    margin-bottom: 52px;
+  }
+
+  /* Serviços em 3 colunas, com o "+" entre eles */
+  .service-grid {
+    grid-template-columns: 1fr 36px 1fr 36px 1fr;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .service-card {
+    max-width: 390px;
+  }
+
+  .service-card > img {
+    width: 140px;
+    height: 132px;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-card p {
+    font-size: 0.98rem;
+  }
+
+  .service-plus {
+    font-size: 2.6rem;
+  }
+
+  /* Planos */
+  .plans-section {
+    padding: 85px 0 110px;
+  }
+
+  .plans-lead {
+    font-size: 1.1rem;
+  }
+
+  .plans-grid {
+    margin-top: 70px;
+  }
+
+  .plan-card {
+    padding: 36px 30px 32px;
+  }
+
+  .plan-card h3,
+  .pkz-plans-grid .plan-card h3 {
+    font-size: 1.6rem;
+  }
+
+  /* Avaliações */
+  .reviews-section {
+    padding: 96px 0;
+  }
+
+  .section-intro {
+    font-size: 1.08rem;
+  }
+
+  .reviews-grid {
+    gap: 28px;
+    margin-top: 52px;
+  }
+
+  .review-card:nth-child(5) {
+    width: calc(50% - 14px);
+  }
+
+  /* Contato e agenda */
+  .contact-section {
+    padding: 88px 0;
+  }
+
+  .contact-panel {
+    gap: 36px;
+    padding: 48px 44px 44px;
+    border-radius: 30px;
+  }
+
+  .contact-copy h2 ~ p {
+    font-size: 1.05rem;
+  }
+
+  .contact-details {
+    font-size: 1.02rem;
+  }
+
+  .contact-details li {
+    grid-template-columns: 48px 1fr;
+    column-gap: 16px;
+  }
+
+  .contact-icon-slot {
+    width: 48px;
+    height: 48px;
+  }
+
+  .agendamento {
+    padding: 32px 28px 30px;
+    border-radius: 22px;
+  }
+
+  .agendamento .sub {
+    font-size: 1.05rem;
+  }
+
+  /* FAQ e chamada final */
+  .faq-section {
+    padding: 96px 0;
+  }
+
+  .faq-section h2 {
+    margin-bottom: 42px;
+  }
+
+  .faq-list summary {
+    min-height: 96px;
+    font-size: 1.12rem;
+  }
+
+  .faq-list details > p {
+    font-size: 1rem;
+  }
+
+  .closing-cta {
+    padding: 120px 0;
+  }
+
+  .closing-cta h2 {
+    font-size: 3.8rem;
+  }
+
+  .closing-cta p {
+    font-size: 1.08rem;
+  }
+
+  .closing-cta .button {
+    min-width: 280px;
+    min-height: 72px;
+    font-size: 1.2rem;
+  }
+
+  /* Rodapé */
+  .landing-footer {
+    padding: 88px 0 80px;
+  }
+
+  .footer-grid {
+    gap: 36px 28px;
+  }
+
+  .footer-logo {
+    width: 210px;
+    height: 64px;
+  }
+
+  .footer-grid nav {
+    padding-left: 22px;
+  }
+
+  /* Hub: o menu deixa de ser painel e vira uma barra horizontal */
+  .hub-header {
+    padding-top: 18px;
+  }
+
+  .header-inner {
+    gap: 17px;
+  }
+
+  .hub-brand {
+    width: 88px;
+    height: 72px;
+  }
+
+  .hub-brand.oto-brand {
+    width: 120px;
+  }
+
+  .brand-divider {
+    height: 52px;
+  }
+
+  .hub-header .menu-toggle {
+    display: none;
+  }
+
+  .hub-nav {
+    position: static;
+    display: flex;
+    margin-left: auto;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: rgba(16, 24, 32, 0.92);
+    box-shadow: none;
+    font-size: 0.85rem;
+  }
+
+  .hub-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .hub-nav a,
+  .hub-nav .hub-contact-trigger {
+    width: auto;
+    padding: 0;
+  }
+
+  .hub-nav li + li > a {
+    border-top: 0;
+  }
+
+  .hub-hero {
+    min-height: 576px;
+    padding: 135px 0 80px;
+    background-position:
+      0 0,
+      0 0,
+      center top,
+      0 0;
+  }
+
+  .hub-hero h1 {
+    font-size: 6.4vw;
+  }
+
+  .hub-hero-content > p {
+    margin: 24px 0 30px;
+    font-size: 1rem;
+  }
+
+  .hub-features {
+    flex-wrap: nowrap;
+    gap: 18px;
+  }
+
+  .hub-features li {
+    flex: 0 1 auto;
+    min-height: 52px;
+    gap: 13px;
+  }
+
+  .hub-features img {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Cartões das empresas lado a lado */
+  .hub-companies {
+    padding: 40px 0 110px;
+  }
+
+  .company-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    max-width: none;
+  }
+
+  /* A imagem do cartão acompanha a tela (26vw), entre 220px e 260px de altura */
+  .company-image {
+    aspect-ratio: auto;
+    height: 26vw;
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .pkz-card-image > h3 {
+    left: 2.8vw;
+    font-size: 2.3vw;
+  }
+
+  .company-copy p {
+    font-size: 0.88rem;
+  }
+
+  .hub-footer {
+    padding: 28px 0 30px;
+  }
+
+  .hub-footer-inner {
+    gap: 34px;
+  }
+
+  .footer-nav {
+    font-size: 0.86rem;
+  }
+
+  .footer-nav ul {
+    gap: 4px 32px;
+  }
+}
+
+/* Tablet em pé (portrait): garoto da PKZ um pouco maior que no celular */
+@media (min-width: 768px) and (orientation: portrait) {
+  .pkz-hero {
+    --photo-h: 74vw;
+  }
+
+  .pkz-hero h1 {
+    font-size: 8vw;
+  }
+}
+
+/* >= 1025px · laptops e desktops ------------------------------------------------ */
+@media (min-width: 1025px) {
+  /* Cabeçalho: o botão ☰ some e o menu fica no centro da barra */
+  .landing-header {
+    top: 30px;
+    width: 92%;
+    min-height: 82px;
+    gap: 1.8vw;
+    padding: 10px 14px 10px 25px;
+  }
+
+  /* A logo acompanha a tela (13vw), entre 150px e 205px */
+  .landing-logo {
+    width: 13vw;
+    min-width: 150px;
+    max-width: 205px;
+    height: 56px;
+  }
+
+  .oto-landing-logo {
+    width: 13.5vw;
+    max-width: 210px;
+  }
+
+  .landing-header .menu-toggle {
+    display: none;
+  }
+
+  .landing-nav {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    display: flex;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: 0.82rem;
+  }
+
+  .oto .landing-nav {
+    background: transparent;
+  }
+
+  .landing-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.8vw;
+  }
+
+  .landing-nav a {
+    padding: 6px 0;
+  }
+
+  .landing-nav li + li a {
+    border-top: 0;
+  }
+
+  .landing-nav a[aria-current="page"] {
+    text-underline-offset: 8px;
+  }
+
+  .student-link {
+    display: inline;
+    margin-left: auto;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .landing-header .header-cta {
+    display: inline-flex;
+    min-height: 50px;
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
+    font-size: 0.82rem;
+  }
+
+  /* Hero One to One: a arte começa no topo e o botão fica embaixo do texto dela */
+  .oto-hero {
+    padding-top: 47.33vw;
+    background-size: 100vw auto;
+    background-position: 50% 0;
+  }
+
+  .desktop-break {
+    display: inline;
+  }
+
+  /* Sobre: foto e texto lado a lado */
+  .about-section {
+    padding: 128px 0 96px;
+  }
+
+  .about-grid {
+    grid-template-columns: 0.72fr 1fr;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  /* A foto acompanha a tela (46vw), entre 560px e 670px de altura */
+  .about-photo {
+    aspect-ratio: auto;
+    height: 46vw;
+    min-height: 560px;
+    max-height: 670px;
+    border-radius: 24px;
+  }
+
+  .about-content {
+    max-width: 780px;
+  }
+
+  .about-content > p,
+  .about-content h3.closing-line {
+    margin-top: 24px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .stats {
+    margin-top: 56px;
+  }
+
+  .stats span {
+    letter-spacing: 0.05em;
+  }
+
+  /* Diferencial: colunas do "+" um pouco mais largas */
+  .difference-section {
+    padding: 145px 0 169px;
+  }
+
+  .difference-section .section-head {
+    margin-bottom: 64px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr 42px 1fr 42px 1fr;
+    gap: 30px;
+  }
+
+  .oto-service-grid {
+    grid-template-columns: 1fr 54px 1fr 54px 1fr;
+  }
+
+  .service-card > img {
+    width: 150px;
+    height: 145px;
+    margin-bottom: 22px;
+  }
+
+  .oto-service-grid .service-card > img {
+    width: 155px;
+    height: 142px;
+  }
+
+  .service-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.38rem;
+  }
+
+  .service-card p {
+    font-size: 1.05rem;
+  }
+
+  .service-plus {
+    font-size: 3rem;
+  }
+
+  .service-plus-image {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* Planos */
+  .plans-section {
+    padding: 85px 0 124px;
+  }
+
+  .oto .plans-section {
+    padding-bottom: 156px;
+  }
+
+  .pkz .plans-grid {
+    margin-top: 86px;
+  }
+
+  .oto .plans-grid {
+    margin-top: 96px;
+  }
+
+  .pkz-plans-grid {
+    gap: 64px;
+    max-width: 804px;
+  }
+
+  .plans-lead {
+    margin-top: 28px;
+  }
+
+  /* Avaliações: grade de 6 colunas, cada cartão ocupa 2 (3 em cima e 2 embaixo, centralizados) */
+  .reviews-section {
+    padding: 120px 0 135px;
+  }
+
+  .pkz .reviews-section {
+    padding-bottom: 40px;
+  }
+
+  .section-intro {
+    font-size: 1.1rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3.4vw;
+    margin-top: 76px;
+  }
+
+  .review-card {
+    grid-column: span 2;
+    padding: 26px 26px 22px;
+  }
+
+  .review-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .review-card:nth-child(5) {
+    grid-column: 4 / span 2;
+    justify-self: stretch;
+    width: auto;
+  }
+
+  .oto-reviews .section-intro {
+    max-width: 860px;
+  }
+
+  .oto-reviews {
+    padding-bottom: 96px;
+  }
+
+  /* Contato: texto e agenda lado a lado */
+  .contact-section {
+    padding: 115px 0 130px;
+  }
+
+  .pkz .contact-section {
+    padding: 150px 0 108px;
+  }
+
+  .oto .contact-section {
+    padding: 40px 0 64px;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1.064fr 1fr;
+    gap: 3.6vw;
+    padding: 50px 4.8vw 55px 5.4vw;
+  }
+
+  .contact-copy {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact-copy .eyebrow {
+    margin-bottom: 36px;
+  }
+
+  .contact-copy h2 {
+    margin-bottom: 36px;
+    font-size: 2rem;
+  }
+
+  .contact-copy h2 ~ p {
+    max-width: 470px;
+    margin: 14px 0;
+  }
+
+  .contact-details {
+    margin-top: 44px;
+  }
+
+  /* A agenda divide o painel com o texto, então tem menos espaço:
+     a tabela usa letras um pouco menores e células mais justas */
+  .agendamento th,
+  .agendamento td {
+    padding: 5px 1px;
+  }
+
+  .agendamento th {
+    font-size: 0.8rem;
+  }
+
+  .agendamento th small {
+    font-size: 0.72rem;
+  }
+
+  .agendamento tbody th {
+    font-size: 0.75rem;
+  }
+
+  .agendamento thead th:first-child {
+    width: 2.9em;
+  }
+
+  .agendamento .slot {
+    min-height: 34px;
+    font-size: 0.78rem;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 175px 0 185px;
+  }
+
+  .pkz .faq-section {
+    padding: 96px 0 200px;
+  }
+
+  .faq-list summary {
+    min-height: 130px;
+    font-size: 1.2rem;
+  }
+
+  .faq-question-text {
+    max-width: 600px;
+  }
+
+  /* Chamada final */
+  .closing-cta {
+    padding: 168px 0;
+  }
+
+  .oto-closing {
+    padding-top: 162px;
+    padding-bottom: 162px;
+  }
+
+  .closing-cta .button {
+    min-width: 370px;
+    min-height: 100px;
+    padding-left: 56px;
+    padding-right: 56px;
+    font-size: 1.4rem;
+  }
+
+  /* Desenho de fundo maior no desktop */
+  .pkz-closing::before,
+  .oto-closing::before,
+  .pkz-pattern::before,
+  .oto-plans-pattern::before {
+    background-size: 2300px auto;
+  }
+
+  /* Rodapé em 4 colunas */
+  .landing-footer {
+    padding: 117px 0 109px;
+  }
+
+  .oto .landing-footer {
+    padding-bottom: 104px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.7fr 1fr 1fr 1fr;
+    gap: 42px;
+  }
+
+  .footer-brand-block {
+    grid-column: auto;
+    gap: 13px;
+  }
+
+  .footer-logo {
+    width: 230px;
+    height: 70px;
+    margin-bottom: 5px;
+  }
+
+  .oto-footer-logo {
+    width: 215px;
+  }
+
+  .footer-grid nav {
+    gap: 6px;
+    padding-left: 24px;
+  }
+
+  .footer-grid nav ul {
+    gap: 6px;
+  }
+
+  .footer-grid nav strong {
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+  }
+
+  .footer-grid nav a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+/* >= 1201px · telas grandes ------------------------------------------------------ */
+@media (min-width: 1201px) {
+  :root {
+    --gutter: 6vw;
+  }
+
+  .content-wrap {
+    width: 88%;
+  }
+
+  /* Cabeçalho e hero PKZ */
+  .landing-header .header-cta {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .pkz-hero h1 {
+    font-size: 6rem;
+  }
+
+  .pkz-hero .hero-inner > p {
+    max-width: 640px;
+    font-size: 1.15rem;
+  }
+
+  /* Planos da One to One em 4 colunas, com o desalinhamento do layout */
+  .oto-plans-grid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    gap: 24px;
+    max-width: none;
+  }
+
+  .oto-plan-card {
+    min-height: 500px;
+    padding: 36px 26px 30px;
+  }
+
+  /* Os cartões pares descem 100px */
+  .oto-plan-card:nth-child(even) {
+    margin-top: 100px;
+  }
+
+  .oto-plan-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .oto-plan-card ul {
+    margin-top: 26px;
+    font-size: 0.86rem;
+  }
+
+  /* Espaços que param de crescer nas telas grandes */
+  .reviews-grid {
+    gap: 50px;
+  }
+
+  .contact-panel {
+    gap: 50px;
+    padding: 50px 70px 55px 78px;
+  }
+
+  .contact-copy h2 {
+    font-size: 2.4rem;
+  }
+
+  /* A agenda volta a ter espaço: letras maiores de novo */
+  .agendamento th,
+  .agendamento td {
+    padding: 6px 3px;
+  }
+
+  .agendamento th {
+    font-size: 0.9rem;
+  }
+
+  .agendamento th small {
+    font-size: 0.78rem;
+  }
+
+  .agendamento tbody th {
+    font-size: 0.85rem;
+  }
+
+  .agendamento thead th:first-child {
+    width: 4em;
+  }
+
+  .agendamento .slot {
+    min-height: 36px;
+    font-size: 0.85rem;
+  }
+
+  /* Hub */
+  .hub-hero h1 {
+    font-size: 5.4rem;
+  }
+
+  .pkz-card-image > h3 {
+    left: 34px;
+    font-size: 1.75rem;
+  }
+
+  /* Setas decorativas da One to One nas margens laterais
+     (a margem tem 6% da tela; a seta tem 150px e para 14px antes do conteúdo) */
+  .oto .section-head.has-deco {
+    padding-right: 0;
+  }
+
+  .about-section .content-wrap,
+  .difference-section .content-wrap,
+  .reviews-section .content-wrap,
+  .about-section .about-content,
+  .section-head {
+    position: static;
+  }
+
+  .deco-wide {
+    display: block;
+  }
+
+  .oto .section-head .deco,
+  .oto .side-decoration {
+    top: 50%;
+    width: 150px;
+    max-width: none;
+    transform: translateY(-50%);
+    opacity: 0.9;
+  }
+
+  .oto .deco-left {
+    right: auto;
+    left: calc(6% - 164px);
+  }
+
+  .oto .deco-right {
+    right: calc(6% - 164px);
+    left: auto;
+  }
+
+  .oto .about-section .deco-right {
+    top: 27%;
+  }
+
+  .oto .about-section .deco-right-2 {
+    top: 73%;
+    opacity: 0.6;
+  }
+}
+
+/* Acessibilidade: quem pediu menos movimento no sistema não recebe rolagem
+   suave nem animações */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
