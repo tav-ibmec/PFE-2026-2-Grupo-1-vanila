@@ -9,27 +9,38 @@
     />
     <title>PKZ Lab | Antes do atleta existe a pessoa</title>
     <link rel="icon" href="data:," />
+
+    <!-- Fontes do Google (Bebas Neue e Outfit) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- CSS do site, script do menu e script da agenda do professor (defer: os scripts só rodam depois que o HTML carrega) -->
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
     <script src="js/agendamento.js" defer></script>
   </head>
   <body class="pkz">
+    <!-- Link que só aparece ao apertar Tab: pula direto para o conteúdo principal -->
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <!-- Cabeçalho em formato de pílula: logo, menu e botões de ação -->
     <header class="landing-header">
       <a
         class="landing-logo"
         href="index.html"
         aria-label="Voltar para Playmakerz e One to One"
-        ><img
+      >
+        <img
           src="assets/imagens-padronizacao/assets/hub/LOGO_PKZ_4.png"
           alt="Playmakerz"
-      /></a>
+        />
+      </a>
+
+      <!-- Botão do menu no celular (o JavaScript troca o ícone e o aria-expanded) -->
       <button
         class="menu-toggle"
         type="button"
@@ -39,22 +50,30 @@
       >
         <span aria-hidden="true">☰</span>
       </button>
+
+      <!-- Menu principal da página -->
       <nav
         class="landing-nav"
         id="pkz-navigation"
         aria-label="Navegação principal"
       >
-        <a href="#home" aria-current="page">Home</a
-        ><a href="#sobre">Sobre Nós</a><a href="#pacotes">Pacotes</a
-        ><a href="#contato">Contato</a
-        ><a class="hub-return" href="index.html">Hub</a>
+        <ul>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#pacotes">Pacotes</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a class="hub-return" href="index.html">Hub</a></li>
+        </ul>
       </nav>
-      <a class="student-link" href="#contato">Já sou aluno</a
-      ><a class="button button-yellow header-cta" href="#pacotes"
+
+      <a class="student-link" href="#contato">Já sou aluno</a>
+      <a class="button button-yellow header-cta" href="#pacotes"
         >Matricule-se!</a
       >
     </header>
+
     <main id="main-content">
+      <!-- Hero: título principal e chamadas para agendar ou saber mais -->
       <section
         class="landing-hero pkz-hero"
         id="home"
@@ -71,10 +90,12 @@
             um desempenho sustentável dentro de campo.
           </p>
           <div class="hero-actions">
-            <a class="button button-yellow" href="#contato">Agende uma aula</a
-            ><a class="button button-outline" href="#sobre">Saiba Mais</a>
+            <a class="button button-yellow" href="#contato">Agende uma aula</a>
+            <a class="button button-outline" href="#sobre">Saiba Mais</a>
           </div>
         </div>
+
+        <!-- Seta que leva para a próxima seção -->
         <button
           class="scroll-cue"
           type="button"
@@ -85,6 +106,7 @@
         </button>
       </section>
 
+      <!-- Sobre a PKZ: foto, texto e números -->
       <section
         class="about-section"
         id="sobre"
@@ -95,16 +117,18 @@
             <img
               src="assets/imagens-padronizacao/assets/pkz/888e68d9-93f2-4db1-bf6e-9280e7f8c543.png"
               alt="Espaço de avaliação e treinamento da PKZ"
+              loading="lazy"
             />
           </figure>
+
           <div class="about-content">
-            <div class="section-head has-deco">
+            <header class="section-head has-deco">
               <p class="eyebrow">Sobre a PLAYMAKERZ</p>
               <h2 id="pkz-about-title">
                 Desenvolvemos atletas,<br />CONSTRUÍMOS
                 <span class="brand-highlight">FUTURO.</span>
               </h2>
-            </div>
+            </header>
             <p>
               O PKZ Lab é um laboratório de performance e avaliação física
               voltado para atletas mirins e jovens. Reunimos avaliação completa,
@@ -120,67 +144,72 @@
             <p class="closing-line">
               Cada treino é um passo a mais na direção do seu sonho!
             </p>
-            <div class="stats" role="group" aria-label="Números Playmakerz">
-              <div>
+
+            <!-- Números da empresa em forma de lista -->
+            <ul class="stats" aria-label="Números Playmakerz">
+              <li>
                 <strong>5+</strong><span>ANOS DE<br />EXPERIÊNCIA</span>
-              </div>
-              <div>
+              </li>
+              <li>
                 <strong>70+</strong><span>ALUNOS<br />MATRICULADOS</span>
-              </div>
-              <div>
+              </li>
+              <li>
                 <strong>10</strong><span>MODALIDADES<br />DIFERENTES</span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
+
+      <!-- Diferencial: os três serviços (o "+" entre eles é só decoração) -->
       <section
         class="difference-section"
         id="diferencial"
         aria-labelledby="pkz-difference-title"
       >
         <div class="content-wrap">
-          <div class="section-head has-deco">
+          <header class="section-head has-deco">
             <p class="eyebrow">NOSSO DIFERENCIAL</p>
             <h2 id="pkz-difference-title">
               Na PKZ evoluir não é treinar sozinho,<br />É CAMINHAR
               <span class="brand-highlight">JUNTO.</span>
             </h2>
-          </div>
+          </header>
+
           <div class="service-grid">
-            <article class="service-card">
+            <article class="service-card" aria-labelledby="pkz-servico-1">
               <img
                 src="assets/imagens-padronizacao/assets/pkz/PKZ_ICON_1.png"
                 alt=""
-                aria-hidden="true"
+                loading="lazy"
               />
-              <h3>Preparação</h3>
+              <h3 id="pkz-servico-1">Preparação</h3>
               <p>
                 Preparação física individualizada, respeitando as fases de
                 desenvolvimento motora e psíquica de cada aluno.
               </p>
             </article>
             <span class="service-plus" aria-hidden="true">+</span>
-            <article class="service-card">
+            <article class="service-card" aria-labelledby="pkz-servico-2">
               <img
                 src="assets/imagens-padronizacao/assets/pkz/PKZ_ICON_2.png"
                 alt=""
-                aria-hidden="true"
+                loading="lazy"
               />
-              <h3>Cuidado</h3>
+              <h3 id="pkz-servico-2">Cuidado</h3>
               <p>
                 Constrói desde cedo uma mentalidade profissional, com
                 acompanhamento nutricional, psicológico e fisioterapêutico.
               </p>
             </article>
             <span class="service-plus" aria-hidden="true">+</span>
-            <article class="service-card">
+            <article class="service-card" aria-labelledby="pkz-servico-3">
               <img
                 src="assets/imagens-padronizacao/assets/pkz/PKZ_ICON_3.png"
                 alt=""
-                aria-hidden="true"
+                loading="lazy"
               />
-              <h3>Videoanálise</h3>
+              <h3 id="pkz-servico-3">Videoanálise</h3>
               <p>
                 Gravação de treinos para analisar movimentos biomecânicos e
                 mostrar para o atleta visualmente onde ele pode melhorar.
@@ -190,6 +219,7 @@
         </div>
       </section>
 
+      <!-- Pacotes: os dois planos da PKZ -->
       <section
         class="plans-section pkz-pattern"
         id="pacotes"
@@ -210,10 +240,15 @@
             />
             para desenvolver seu máximo dentro e fora de campo.
           </p>
+
           <div class="plans-grid pkz-plans-grid">
-            <article class="plan-card" id="pacote-performance">
+            <article
+              class="plan-card"
+              id="pacote-performance"
+              aria-labelledby="pacote-performance-titulo"
+            >
               <span class="plan-label">pacote</span>
-              <h3>PERFORMANCE</h3>
+              <h3 id="pacote-performance-titulo">PERFORMANCE</h3>
               <p>
                 Para quem busca uma evolução acelerada, com mais frequência de
                 treinos e acompanhamento próximo para potencializar resultados!
@@ -224,6 +259,7 @@
                 <li>Fisioterapia com foco em recovery e prevenção.</li>
                 <li>Avaliação completa.</li>
               </ul>
+              <!-- O texto escondido completa o nome do link para quem usa leitor de tela -->
               <a class="button button-yellow" href="#agendar"
                 >Matricule-se!<span class="visually-hidden">
                   no pacote Performance: ir para o agendamento da aula
@@ -231,9 +267,13 @@
                 ></a
               >
             </article>
-            <article class="plan-card" id="pacote-desenvolvimento">
+            <article
+              class="plan-card"
+              id="pacote-desenvolvimento"
+              aria-labelledby="pacote-desenvolvimento-titulo"
+            >
               <span class="plan-label">pacote</span>
-              <h3>DESENVOLVIMENTO</h3>
+              <h3 id="pacote-desenvolvimento-titulo">DESENVOLVIMENTO</h3>
               <p>
                 Para quem quer construir uma base sólida. Equilíbrio ideal entre
                 treino, saúde e desenvolvimento progressivo.
@@ -254,19 +294,21 @@
           </div>
         </div>
       </section>
+
+      <!-- Avaliações: cada depoimento é uma figure com a citação (blockquote) e o autor (figcaption) -->
       <section
         class="reviews-section"
         id="avaliacoes"
         aria-labelledby="pkz-reviews-title"
       >
         <div class="content-wrap">
-          <div class="section-head has-deco">
+          <header class="section-head has-deco">
             <p class="eyebrow">AVALIAÇÕES</p>
             <h2 id="pkz-reviews-title">
               A confiança de pais <span class="nowrap">que buscam</span><br />O
               MELHOR PARA SEUS <span class="brand-highlight">FILHOS.</span>
             </h2>
-          </div>
+          </header>
           <p class="section-intro">
             Por trás de cada conquista em campo, existe uma família que
             acreditou e acompanhou o processo. Confira o que os pais e jovens
@@ -276,85 +318,228 @@
           <p class="section-intro">
             Mais do que palavras, o nosso método é comprovado na prática.
           </p>
+
           <div class="reviews-grid">
-            <blockquote class="review-card">
+            <figure class="review-card">
               <span class="stars" role="img" aria-label="5 de 5 estrelas"
                 >★★★★★</span
               >
-              <p>
-                “A mudança na velocidade e na confiança do meu filho foi
-                absurda. A equipe cuida de tudo com muito carinho e ciência.”
-              </p>
-              <footer>
-                <span class="review-initial">P</span>Patricia K., mãe do Enzo
-                (10 anos)
-              </footer>
-            </blockquote>
-            <blockquote class="review-card">
+              <blockquote>
+                <p>
+                  “A mudança na velocidade e na confiança do meu filho foi
+                  absurda. A equipe cuida de tudo com muito carinho e ciência.”
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="review-initial" aria-hidden="true">P</span>Patricia
+                K., mãe do Enzo (10 anos)
+              </figcaption>
+            </figure>
+            <figure class="review-card">
               <span class="stars" role="img" aria-label="5 de 5 estrelas"
                 >★★★★★</span
               >
-              <p>
-                “Os treinos no CT são muito diferentes da escolinha. A gente
-                treina agilidade, força e ajusta o movimento exato do passe e do
-                chute. Sinto que estou muito mais confiante quando entro em
-                campo nas competições.”
-              </p>
-              <footer>
-                <span class="review-initial">G</span>Gabriel T., atleta da PKZ
-                (12 anos)
-              </footer>
-            </blockquote>
-            <blockquote class="review-card">
+              <blockquote>
+                <p>
+                  “Os treinos no CT são muito diferentes da escolinha. A gente
+                  treina agilidade, força e ajusta o movimento exato do passe e
+                  do chute. Sinto que estou muito mais confiante quando entro em
+                  campo nas competições.”
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="review-initial" aria-hidden="true">G</span>Gabriel
+                T., atleta da PKZ (12 anos)
+              </figcaption>
+            </figure>
+            <figure class="review-card">
               <span class="stars" role="img" aria-label="5 de 5 estrelas"
                 >★★★★★</span
               >
-              <p>
-                “Metodologia impecável. A gente vê a evolução física e técnica a
-                cada semana, sem queima de etapas.”
-              </p>
-              <footer>
-                <span class="review-initial">R</span>Roberto Q., pai da Aline (8
-                anos)
-              </footer>
-            </blockquote>
-            <blockquote class="review-card">
+              <blockquote>
+                <p>
+                  “Metodologia impecável. A gente vê a evolução física e técnica
+                  a cada semana, sem queima de etapas.”
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="review-initial" aria-hidden="true">R</span>Roberto
+                Q., pai da Aline (8 anos)
+              </figcaption>
+            </figure>
+            <figure class="review-card">
               <span class="stars" role="img" aria-label="5 de 5 estrelas"
                 >★★★★★</span
               >
-              <p>
-                “A videoanálise abriu os olhos do meu filho. Ele passou a
-                entender o jogo de verdade, não apenas correr atrás da bola.”
-              </p>
-              <footer>
-                <span class="review-initial">J</span>Juliana W., mãe do Caíque
-                (9 anos)
-              </footer>
-            </blockquote>
-            <blockquote class="review-card">
+              <blockquote>
+                <p>
+                  “A videoanálise abriu os olhos do meu filho. Ele passou a
+                  entender o jogo de verdade, não apenas correr atrás da bola.”
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="review-initial" aria-hidden="true">J</span>Juliana
+                W., mãe do Caíque (9 anos)
+              </figcaption>
+            </figure>
+            <figure class="review-card">
               <span class="stars" role="img" aria-label="5 de 5 estrelas"
                 >★★★★★</span
               >
-              <p>
-                “Os treinos são intensos e dinâmicos! Aprendi a dominar e
-                orientar o corpo antes de receber a bola. É o meu dia favorito
-                da semana.”
-              </p>
-              <footer>
-                <span class="review-initial">B</span>Brenda P., atleta da PKZ
-                (14 anos)
-              </footer>
-            </blockquote>
+              <blockquote>
+                <p>
+                  “Os treinos são intensos e dinâmicos! Aprendi a dominar e
+                  orientar o corpo antes de receber a bola. É o meu dia favorito
+                  da semana.”
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="review-initial" aria-hidden="true">B</span>Brenda
+                P., atleta da PKZ (14 anos)
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
+      <!-- Contato: dados da PKZ (address) e agenda da aula experimental -->
+      <section
+        class="contact-section"
+        id="contato"
+        aria-labelledby="pkz-contact-title"
+      >
+        <div class="content-wrap contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow">ENTRE EM CONTATO</p>
+            <h2 id="pkz-contact-title">
+              Incentive seu <span class="nowrap">filho a</span><br /><span
+                >SE TORNAR UM ATLETA!</span
+              >
+            </h2>
+            <p>
+              Chegou o momento de investir no futuro esportivo do seu filho.
+              Aqui ele será tratado com atenção e cuidado.
+            </p>
+            <p>
+              Mande uma mensagem para a nossa equipe e traga seu filho para uma
+              aula experimental.
+            </p>
+
+            <!-- Links externos abrem em nova aba sempre com rel="noopener noreferrer" -->
+            <address>
+              <ul class="contact-details">
+                <li>
+                  <img
+                    class="contact-icon-slot"
+                    src="assets/prototype-derived/contact-icons/pkz-address.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="contact-content"
+                    ><span class="contact-label">Endereço</span
+                    ><a
+                      href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Armando%20Lombardi%2C%20949%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Av. Armando Lombardi, 949 - Barra da Tijuca<span
+                        class="visually-hidden"
+                      >
+                        (abre no Google Maps em nova aba)</span
+                      ></a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <img
+                    class="contact-icon-slot"
+                    src="assets/prototype-derived/contact-icons/pkz-phone.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="contact-content"
+                    ><span class="contact-label">Telefone / WhatsApp</span
+                    ><a
+                      href="https://wa.me/5521972657266"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Conversar com a PKZ Lab pelo WhatsApp no número +55 21 97265-7266"
+                      >+55 21 97265-7266</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <img
+                    class="contact-icon-slot"
+                    src="assets/prototype-derived/contact-icons/pkz-email.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="contact-content"
+                    ><span class="contact-label">E-mail</span
+                    ><a
+                      href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pkz.lab%40gmail.com&amp;su=Contato%20pelo%20site%20-%20PKZ%20Lab"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >pkz.lab@gmail.com<span class="visually-hidden">
+                        (escrever e-mail, abre em nova aba)</span
+                      ></a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <!-- Agenda da aula experimental: HTML e JavaScript do professor, sem nenhuma alteração.
+               Única adaptação: o <main> do arquivo dele virou <div class="agendamento" id="agendar">,
+               porque a página já tem um <main> (a classe é usada pelo CSS e o id pelos links "Matricule-se!").
+               O "prettier-ignore" faz o Prettier não mexer no código dele. -->
+          <!-- prettier-ignore -->
+          <div class="agendamento" id="agendar">
+            <h1>Agende sua aula experimental</h1>
+            <p class="sub">Grátis e sem cadastro. Escolha um horário livre desta semana.</p>
+            <div class="legenda">
+              <span><i style="background:var(--livre)"></i>Livre</span>
+              <span><i style="background:var(--ocupado)"></i>Ocupado ou já passou</span>
+            </div>
+            <div class="nav">
+              <button id="anterior" type="button">← Anterior</button>
+              <span id="semanaTexto"></span>
+              <button id="proxima" type="button">Próxima →</button>
+            </div>
+            <div class="scroll"><table id="grade" aria-label="Horários da semana"></table></div>
+            <div id="status" role="status" aria-live="polite"></div>
+            <button class="reset" id="reset">Limpar reservas (só para testes)</button>
+            <button class="reset" id="verDados" type="button">Ver dados salvos</button>
+            <pre id="dados" hidden></pre>
+          </div>
+
+          <!-- prettier-ignore -->
+          <dialog id="modal">
+            <form id="form">
+              <h2>Confirmar horário</h2>
+              <div id="resumo" style="color:var(--muted)"></div>
+              <label>Nome <input name="nome" required minlength="2" autocomplete="name"></label>
+              <label>E-mail <input name="email" type="email" required autocomplete="email"></label>
+              <label>Telefone <input name="telefone" type="tel" required pattern="[0-9 ()+\-]{8,}" title="Use só números, espaços, parênteses ou hífen" autocomplete="tel"></label>
+              <div id="erroForm" class="erro" style="color:var(--erro);min-height:1.4em;margin-top:8px"></div>
+              <div class="acoes">
+                <button type="button" id="cancelar">Cancelar</button>
+                <button type="submit" id="confirmar">Reservar</button>
+              </div>
+            </form>
+          </dialog>
+        </div>
+      </section>
+
+      <!-- Perguntas frequentes: details/summary já abre e fecha sem JavaScript -->
       <section class="faq-section" id="faq" aria-labelledby="pkz-faq-title">
         <div class="content-wrap">
           <p class="eyebrow">FAQ</p>
           <h2 id="pkz-faq-title">
             Perguntas <span class="brand-highlight">Frequentes.</span>
           </h2>
+
           <div class="faq-list">
             <details>
               <summary>
@@ -412,154 +597,8 @@
           </div>
         </div>
       </section>
-      <section
-        class="contact-section"
-        id="contato"
-        aria-labelledby="pkz-contact-title"
-      >
-        <div class="content-wrap contact-panel">
-          <div class="contact-copy">
-            <p class="eyebrow">ENTRE EM CONTATO</p>
-            <h2 id="pkz-contact-title">
-              Incentive seu <span class="nowrap">filho a</span><br /><span
-                >SE TORNAR UM ATLETA!</span
-              >
-            </h2>
-            <p>
-              Chegou o momento de investir no futuro esportivo do seu filho.
-              Aqui ele será tratado com atenção e cuidado.
-            </p>
-            <p>
-              Mande uma mensagem para a nossa equipe e traga seu filho para uma
-              aula experimental.
-            </p>
-            <ul class="contact-details">
-              <li>
-                <img
-                  class="contact-icon-slot"
-                  src="assets/prototype-derived/contact-icons/pkz-address.png"
-                  alt=""
-                  aria-hidden="true"
-                /><span class="contact-content"
-                  ><span class="contact-label">Endereço</span
-                  ><a
-                    href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Armando%20Lombardi%2C%20949%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Av. Armando Lombardi, 949 - Barra da Tijuca<span
-                      class="visually-hidden"
-                    >
-                      (abre no Google Maps em nova aba)</span
-                    ></a
-                  ></span
-                >
-              </li>
-              <li>
-                <img
-                  class="contact-icon-slot"
-                  src="assets/prototype-derived/contact-icons/pkz-phone.png"
-                  alt=""
-                  aria-hidden="true"
-                /><span class="contact-content"
-                  ><span class="contact-label">Telefone / WhatsApp</span
-                  ><a
-                    href="https://wa.me/5521972657266"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Conversar com a PKZ Lab pelo WhatsApp no número +55 21 97265-7266"
-                    >+55 21 97265-7266</a
-                  ></span
-                >
-              </li>
-              <li>
-                <img
-                  class="contact-icon-slot"
-                  src="assets/prototype-derived/contact-icons/pkz-email.png"
-                  alt=""
-                  aria-hidden="true"
-                /><span class="contact-content"
-                  ><span class="contact-label">E-mail</span
-                  ><a
-                    href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pkz.lab%40gmail.com&amp;su=Contato%20pelo%20site%20-%20PKZ%20Lab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >pkz.lab@gmail.com<span class="visually-hidden">
-                      (escrever e-mail, abre em nova aba)</span
-                    ></a
-                  ></span
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="agendamento" id="agendar">
-            <h3>Agende sua aula experimental</h3>
-            <p class="sub">
-              Grátis e sem cadastro. Escolha um horário livre desta semana.
-            </p>
-            <div class="legenda">
-              <span><i style="background: var(--livre)"></i>Livre</span>
-              <span
-                ><i style="background: var(--ocupado)"></i>Ocupado ou já
-                passou</span
-              >
-            </div>
-            <div class="nav">
-              <button id="anterior" type="button">← Anterior</button>
-              <span id="semanaTexto"></span>
-              <button id="proxima" type="button">Próxima →</button>
-            </div>
-            <div class="scroll">
-              <table id="grade" aria-label="Horários da semana"></table>
-            </div>
-            <div id="status" role="status" aria-live="polite"></div>
-            <button class="reset" id="reset" type="button">
-              Limpar reservas (só para testes)
-            </button>
-            <button class="reset" id="verDados" type="button">
-              Ver dados salvos
-            </button>
-            <pre id="dados" hidden></pre>
 
-            <dialog id="modal">
-              <form id="form">
-                <h2>Confirmar horário</h2>
-                <div id="resumo" style="color: var(--muted)"></div>
-                <label
-                  >Nome
-                  <input name="nome" required minlength="2" autocomplete="name"
-                /></label>
-                <label
-                  >E-mail
-                  <input
-                    name="email"
-                    type="email"
-                    required
-                    autocomplete="email"
-                /></label>
-                <label
-                  >Telefone
-                  <input
-                    name="telefone"
-                    type="tel"
-                    required
-                    pattern="[0-9 \(\)\+\-]{8,}"
-                    title="Use só números, espaços, parênteses ou hífen"
-                    autocomplete="tel"
-                /></label>
-                <div
-                  id="erroForm"
-                  class="erro"
-                  style="color: var(--erro); min-height: 1.4em; margin-top: 8px"
-                ></div>
-                <div class="acoes">
-                  <button type="button" id="cancelar">Cancelar</button>
-                  <button type="submit" id="confirmar">Reservar</button>
-                </div>
-              </form>
-            </dialog>
-          </div>
-        </div>
-      </section>
+      <!-- Chamada final para agendar ou se matricular -->
       <section
         class="closing-cta pkz-closing"
         aria-labelledby="pkz-closing-title"
@@ -577,57 +616,75 @@
       </section>
     </main>
 
+    <!-- Rodapé: marca, horários e três grupos de links -->
     <footer class="landing-footer pkz-footer">
       <div class="content-wrap footer-grid">
         <div class="footer-brand-block">
-          <a class="footer-logo" href="index.html" aria-label="Voltar ao Hub"
-            ><img
+          <a class="footer-logo" href="index.html" aria-label="Voltar ao Hub">
+            <img
               src="assets/imagens-padronizacao/assets/hub/LOGO_PKZ_4.png"
               alt="Playmakerz"
-          /></a>
+              loading="lazy"
+            />
+          </a>
           <p>Metodologia • Treino • Acompanhamento • Avaliação</p>
           <p>
             Formamos pessoas.<br />Desenvolvemos atletas.<br />Construímos
             futuros.
           </p>
           <p>Seg a Sex: 8h - 22h<br />Sab e Dom: 8h - 16h</p>
-          <small>© 2026, Todos os Direitos Reservados</small>
+          <small>&copy; 2026, Todos os Direitos Reservados</small>
         </div>
+
         <nav aria-label="Explorar">
           <strong>Explorar</strong>
-          <a href="#home">Home</a>
-          <a href="#sobre">Sobre Nós</a>
-          <a href="#diferencial">Diferencial</a>
-          <a href="#pacotes">Pacotes</a>
-          <a href="#avaliacoes">Avaliações</a>
-          <a href="#contato">Contato</a>
-          <a href="#faq">FAQ</a>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#diferencial">Diferencial</a></li>
+            <li><a href="#pacotes">Pacotes</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
         </nav>
+
         <nav aria-label="Pacotes">
           <strong>Pacotes</strong>
-          <a href="#pacote-performance">Performance</a>
-          <a href="#pacote-desenvolvimento">Desenvolvimento</a>
+          <ul>
+            <li><a href="#pacote-performance">Performance</a></li>
+            <li><a href="#pacote-desenvolvimento">Desenvolvimento</a></li>
+          </ul>
         </nav>
+
         <nav aria-label="Redes sociais">
           <strong>Redes sociais</strong>
-          <a
-            href="https://www.instagram.com/playmakerz_pkz?dlrf=MWR6M3M1dHpyMjMxcw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
-          <a
-            href="https://www.facebook.com.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Facebook</a
-          >
-          <a
-            href="https://www.tiktok.com/pt-BR"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Tiktok</a
-          >
+          <ul>
+            <li>
+              <a
+                href="https://www.instagram.com/playmakerz_pkz?dlrf=MWR6M3M1dHpyMjMxcw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/pt-BR"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tiktok</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
     </footer>
