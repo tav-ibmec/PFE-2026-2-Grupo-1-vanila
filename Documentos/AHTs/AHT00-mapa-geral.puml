@@ -10,40 +10,44 @@ note right
   Foram adicionadas as AHT 06 e AHT 07,
   referentes ao agendamento de aula experimental
   do Studio One to One e da PKZ Lab.
+  A agenda fica na seção Contato de cada Landing Page.
+
+  O contato pelo WhatsApp, disponível na Página Inicial,
+  está detalhado na AHT 01.
 end note
 
 start
 
-#5B9BD5:Página Inicial\n(Hero Section e Hub de Marcas);
+#1E90FF:Página Inicial\n(Hero Section e Hub de Marcas);
 note right: AHT 01
 
 if (Qual marca foi escolhida?) then (PKZ Lab)
-  #lightyellow:Landing Page PKZ Lab;
+  #FFF07F:Landing Page PKZ Lab;
   note right: AHT 03
 
   if (Usuário decide agendar uma aula experimental?) then (sim)
-    #lightyellow:Agendamento de Aula Experimental da PKZ Lab;
+    #FFF07F:Agendamento de Aula Experimental da PKZ Lab;
     note right: AHT 07
   else (não)
-    #lightyellow:Usuário encerra a visita ou continua navegando pelo site;
+    #FFF07F:Usuário encerra a visita ou volta à Página Inicial;
   endif
 
 else (One to One)
-  #lightyellow:Landing Page Studio One to One;
+  #FFF07F:Landing Page Studio One to One;
   note right: AHT 02
 
   if (Usuário decide agendar uma aula experimental?) then (sim)
-    #lightyellow:Agendamento de Aula Experimental do Studio One to One;
+    #FFF07F:Agendamento de Aula Experimental do Studio One to One;
     note right: AHT 06
   else (não)
-    #lightyellow:Usuário encerra a visita ou continua navegando pelo site;
+    #FFF07F:Usuário encerra a visita ou volta à Página Inicial;
   endif
 endif
 
 legend right
-  |Cor | Significado|
-  |<#5B9BD5>| Ação ou tela exibida pelo sistema |
-  |<#lightyellow>| Resultado de uma decisão do usuário |
+  |= Cor |= Significado |
+  |<#1E90FF>| Ação ou tela exibida pelo sistema |
+  |<#FFF07F>| Resultado de uma decisão do usuário |
 endlegend
 
 stop
