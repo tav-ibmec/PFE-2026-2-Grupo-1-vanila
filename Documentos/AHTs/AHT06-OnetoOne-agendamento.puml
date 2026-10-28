@@ -8,68 +8,66 @@ title AHT 06: Agendamento de Aula Experimental do Studio One to One
 note right
   Somente o agendamento de aula experimental.
   Não há cadastro de usuário, login, sign up.
-  O agendamento do Studio One to One é aberto em um modal a partir da AHT 02.
-  
-  O botão "Voltar" existe em todas as telas do modal,
+  A agenda fica na seção Contato da Landing Page do Studio One to One (AHT 02).
+  O modal abre somente depois que o usuário escolhe um horário livre.
+  A reserva fica salva no próprio navegador (não há back-end).
+
+  O botão "Cancelar" existe durante todo o preenchimento do modal,
   mas é representado uma única vez para evitar redundância.
+  Os botões "Limpar reservas (só para testes)" e "Ver dados salvos"
+  são ferramentas de teste e não fazem parte do percurso do usuário.
 end note
 
 start
 
-#C4B5FD:Usuário clica em "Agendar aula experimental" na Landing Page;
-#C4B5FD:Sistema abre o modal de agendamento;
-#C4B5FD:Sistema exibe o calendário com os dias disponíveis e o botão "Voltar";
+#1E90FF:Usuário chega à agenda pelo "Matricule-se!" de um plano, pelo "Agende uma aula" do CTA ou rolando a página;
+#1E90FF:Sistema exibe a tabela da semana com os horários livres ("Livre"), os indisponíveis ("—") e os botões "Anterior" e "Próxima";
 
-if (Usuário clicou em "Voltar"?) then (Sim)
-  #lightyellow:Usuário retorna à navegação na Landing Page do Studio One to One;
+if (Usuário deseja reservar um horário?) then (Não)
+  #FFF07F:Usuário continua navegando pela Landing Page do Studio One to One;
   note right: AHT 02
   stop
-else (Não)
-  #lightyellow:Usuário escolhe uma data no calendário;
+else (Sim)
+  #FFF07F:Usuário procura um horário livre na tabela;
 endif
 
-while (A data possui horários disponíveis?) is (Não)
-  #C4B5FD:Sistema informa "Não há horários disponíveis nesta data";
-  #lightyellow:Usuário escolhe outra data no calendário;
+while (Há um horário livre que serve ao usuário nesta semana?) is (Não)
+  #FFF07F:Usuário troca de semana em "Anterior" ou "Próxima" (até 4 semanas);
+  #1E90FF:Sistema exibe os horários da semana escolhida;
 endwhile (Sim)
 
-#C4B5FD:Sistema exibe os horários disponíveis para a data escolhida;
-#lightyellow:Usuário escolhe um horário;
+#FFF07F:Usuário clica em um horário "Livre";
+#1E90FF:Sistema abre o modal com o dia e o horário escolhidos;
+#1E90FF:Sistema exibe o formulário com Nome, E-mail e Telefone e os botões "Cancelar" e "Reservar";
 
-#C4B5FD:Sistema exibe o formulário necessário para solicitar a aula experimental;
-#C4B5FD:Sistema exibe os botões "Voltar" e "Confirmar agendamento";
+if (Usuário clicou em "Cancelar"?) then (Sim)
+  #FFF07F:Modal fecha e o usuário volta à agenda sem reservar;
+  stop
+else (Não)
+endif
 
 repeat
-  #lightyellow:Usuário preenche os dados solicitados e clica em "Confirmar agendamento";
+  #FFF07F:Usuário preenche os dados solicitados e clica em "Reservar";
 
   if (Os dados solicitados estão válidos?) then (Sim)
-    #C4B5FD:Sistema envia os dados do agendamento ao back-end;
-
-    if (Agendamento registrado com sucesso?) then (Sim)
-      #C4B5FD:Sistema exibe "Aula experimental agendada com sucesso!";
-      #C4B5FD:Sistema exibe a data e o horário confirmados;
-      break
-    else (Não)
-      #C4B5FD:Sistema informa "Não foi possível concluir o agendamento";
-      #lightyellow:Usuário decide se deseja tentar novamente;
-    endif
-
+    #1E90FF:Sistema salva a reserva no navegador e fecha o modal;
+    #1E90FF:Sistema exibe "Reserva confirmada para (data e horário)!" e marca o horário como indisponível ("—");
+    break
   else (Não)
-    #C4B5FD:Sistema destaca os dados inválidos ou incompletos;
-    #C4B5FD:Sistema informa "Verifique os dados e tente novamente";
-    #lightyellow:Usuário decide se deseja tentar novamente;
+    #1E90FF:Sistema destaca o campo vazio ou inválido e não envia o formulário;
+    #FFF07F:Usuário decide se deseja corrigir os dados;
   endif
 
-repeat while (Usuário deseja tentar novamente?) is (Sim)
+repeat while (Usuário deseja corrigir os dados?) is (Sim)
 
-#lightyellow:Usuário fecha o modal e retorna à Landing Page do Studio One to One;
+#FFF07F:Usuário continua na Landing Page do Studio One to One, com o modal fechado;
 
 stop
 
 legend right
   |= Cor |= Significado |
-  |<#C4B5FD>| Ação ou tela exibida pelo sistema |
-  |<#lightyellow>| Resultado de uma decisão do usuário |
+  |<#1E90FF>| Ação ou tela exibida pelo sistema |
+  |<#FFF07F>| Resultado de uma decisão do usuário |
 endlegend
 
 @enduml
