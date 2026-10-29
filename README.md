@@ -76,4 +76,4 @@ A AC Vanilla reúne o desenvolvimento das páginas institucionais da PKZ Lab e d
 
 ## Link para o HUB
 
-https://tav-ibmec.github.io/PFE-2026-2-Grupo-1-vanila/codigo-vanilla/index.html?utm_source=chatgpt.com
+[Link para o HUB](https://tav-ibmec.github.io/PFE-2026-2-Grupo-1-vanila/codigo-vanilla/index.html)
