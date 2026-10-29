@@ -73,3 +73,7 @@ A publicação pelo GitHub Pages faz parte da preparação da entrega da AC Vani
 ## Considerações finais
 
 A AC Vanilla reúne o desenvolvimento das páginas institucionais da PKZ Lab e do Studio One to One em uma estrutura integrada. O trabalho contempla a organização do código, a identidade visual, as funcionalidades implementadas e a documentação das atividades, buscando manter a consistência entre as páginas e facilitar a manutenção do projeto.
+
+## Link para o HUB
+
+https://tav-ibmec.github.io/PFE-2026-2-Grupo-1-vanila/codigo-vanilla/index.html?utm_source=chatgpt.com
